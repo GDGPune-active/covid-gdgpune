@@ -2,6 +2,7 @@
 
 ## Getting Started
 
+The client code can be found in the `client` folder and the server code can be found in the `server` folder.
 
 ### Prerequisites
 
