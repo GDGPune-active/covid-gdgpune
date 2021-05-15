@@ -40,3 +40,7 @@ The steps will be
 git clone
 cd project
 ```
+
+## For Git Commit Statements
+To ensure that Git Commit Statements are consistents by using a custom template, please follow the below mentioned URL on Linux systems to setup the required GIT Configurations.
+URL: https://dev.to/timmybytes/keeping-git-commit-messages-consistent-with-a-custom-template-1jkm?signin=true
