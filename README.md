@@ -26,9 +26,24 @@ The steps will be
 git clone
 cd project
 
-npm i -g serve
-serve
+npm install
+npm start
 ```
+
+
+### Building project
+
+```
+npm run build
+```
+
+### Testing project
+
+```
+npm run test
+```
+
+
 
 ## Contributing
 
