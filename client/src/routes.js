@@ -48,6 +48,7 @@ const dashboardRoutes = [
     icon: Person,
     component: UserProfile,
     layout: "/admin",
+    private: true,
   },
   {
     path: "/table",
