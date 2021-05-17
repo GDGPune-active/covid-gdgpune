@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 // creates a beautiful scrollbar
 import PerfectScrollbar from "perfect-scrollbar";
@@ -17,6 +17,22 @@ import styles from "assets/jss/material-dashboard-react/layouts/adminStyle.js";
 
 import bgImage from "assets/img/sidebar-2.jpg";
 import logo from "assets/img/reactlogo.png";
+import {
+  Backdrop,
+  Button,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogContentText,
+  DialogTitle,
+  Fade,
+  Modal,
+  Paper,
+  Slide,
+} from "@material-ui/core";
+import Auth from "components/Auth/Auth";
+import firebase from "firebase";
+import CustomRoute from "components/Routes/CustomRoute";
 
 let ps;
 
@@ -25,10 +41,12 @@ const switchRoutes = (
     {routes.map((prop, key) => {
       if (prop.layout === "/admin") {
         return (
-          <Route
+          <CustomRoute
             path={prop.layout + prop.path}
             component={prop.component}
             key={key}
+            exact
+            auth={prop.private}
           />
         );
       }
@@ -50,6 +68,7 @@ export default function Admin({ ...rest }) {
   const [color, setColor] = React.useState("blue");
   const [fixedClasses, setFixedClasses] = React.useState("dropdown show");
   const [mobileOpen, setMobileOpen] = React.useState(false);
+
   const handleImageClick = (image) => {
     setImage(image);
   };
@@ -92,6 +111,7 @@ export default function Admin({ ...rest }) {
       window.removeEventListener("resize", resizeFunction);
     };
   }, [mainPanel]);
+
   return (
     <div className={classes.wrapper}>
       <Sidebar
@@ -104,6 +124,7 @@ export default function Admin({ ...rest }) {
         color={color}
         {...rest}
       />
+      {/* <Auth /> */}
       <div className={classes.mainPanel} ref={mainPanel}>
         <Navbar
           routes={routes}
@@ -119,14 +140,6 @@ export default function Admin({ ...rest }) {
           <div className={classes.map}>{switchRoutes}</div>
         )}
         {getRoute() ? <Footer /> : null}
-        <FixedPlugin
-          handleImageClick={handleImageClick}
-          handleColorClick={handleColorClick}
-          bgColor={color}
-          bgImage={image}
-          handleFixedClick={handleFixedClick}
-          fixedClasses={fixedClasses}
-        />
       </div>
     </div>
   );

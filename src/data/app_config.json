@@ -1,0 +1,12 @@
+{
+  "firebase": {
+    "apiKey": "AIzaSyAWyxkEEG7_wmHTBpNVzXXkSUNqapg-3Ps",
+    "authDomain": "rustee-prod.firebaseapp.com",
+    "databaseURL": "https://rustee-prod.firebaseio.com",
+    "projectId": "rustee-prod",
+    "storageBucket": "rustee-prod.appspot.com",
+    "messagingSenderId": "396644174845",
+    "appId": "1:396644174845:web:c59c97ed2e50601dade794",
+    "measurementId": "G-43P85MWRGD"
+  }
+}

@@ -62,6 +62,7 @@ const dashboardRoutes = [
     icon: LibraryBooks,
     component: Typography,
     layout: "/admin",
+    private: true,
   },
   {
     path: "/icons",
