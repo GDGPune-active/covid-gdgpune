@@ -137,7 +137,7 @@ const Auth = (props) => {
       onClose={() => {
         props.setShowLoginPopup && props.setShowLoginPopup(false);
         setOpen(false);
-        !props.setShowLoginPopup && history.push("/admin/dashboard");
+        !props.setShowLoginPopup && history.push("/dashboard");
       }}
       keepMounted
       aria-labelledby="alert-dialog-slide-title"
