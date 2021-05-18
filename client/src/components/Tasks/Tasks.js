@@ -67,9 +67,7 @@ export default function Tasks(props) {
                   className={classes.tableActionButton}
                 >
                   <Edit
-                    className={
-                      classes.tableActionButtonIcon + " " + classes.edit
-                    }
+                    className={`${classes.tableActionButtonIcon} ${classes.edit}`}
                   />
                 </IconButton>
               </Tooltip>
@@ -84,9 +82,7 @@ export default function Tasks(props) {
                   className={classes.tableActionButton}
                 >
                   <Close
-                    className={
-                      classes.tableActionButtonIcon + " " + classes.close
-                    }
+                    className={`${classes.tableActionButtonIcon} ${classes.close}`}
                   />
                 </IconButton>
               </Tooltip>

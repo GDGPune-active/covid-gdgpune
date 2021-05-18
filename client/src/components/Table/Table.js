@@ -19,35 +19,29 @@ export default function CustomTable(props) {
     <div className={classes.tableResponsive}>
       <Table className={classes.table}>
         {tableHead !== undefined ? (
-          <TableHead className={classes[tableHeaderColor + "TableHeader"]}>
+          <TableHead className={classes[`${tableHeaderColor}TableHeader`]}>
             <TableRow className={classes.tableHeadRow}>
-              {tableHead.map((prop, key) => {
-                return (
-                  <TableCell
-                    className={classes.tableCell + " " + classes.tableHeadCell}
-                    key={key}
-                  >
-                    {prop}
-                  </TableCell>
-                );
-              })}
+              {tableHead.map((prop, key) => (
+                <TableCell
+                  className={`${classes.tableCell} ${classes.tableHeadCell}`}
+                  key={key}
+                >
+                  {prop}
+                </TableCell>
+              ))}
             </TableRow>
           </TableHead>
         ) : null}
         <TableBody>
-          {tableData.map((prop, key) => {
-            return (
-              <TableRow key={key} className={classes.tableBodyRow}>
-                {prop.map((prop, key) => {
-                  return (
-                    <TableCell className={classes.tableCell} key={key}>
-                      {prop}
-                    </TableCell>
-                  );
-                })}
-              </TableRow>
-            );
-          })}
+          {tableData.map((prop, key) => (
+            <TableRow key={key} className={classes.tableBodyRow}>
+              {prop.map((prop, key) => (
+                <TableCell className={classes.tableCell} key={key}>
+                  {prop}
+                </TableCell>
+              ))}
+            </TableRow>
+          ))}
         </TableBody>
       </Table>
     </div>
