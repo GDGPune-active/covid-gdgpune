@@ -42,7 +42,7 @@ export default function RTLNavbarLinks() {
       <div className={classes.searchWrapper}>
         <CustomInput
           formControlProps={{
-            className: classes.margin + " " + classes.search,
+            className: `${classes.margin} ${classes.search}`,
           }}
           inputProps={{
             placeholder: "جستجو...",
@@ -90,11 +90,9 @@ export default function RTLNavbarLinks() {
           anchorEl={open}
           transition
           disablePortal
-          className={
-            classNames({ [classes.popperClose]: !open }) +
-            " " +
+          className={`${classNames({ [classes.popperClose]: !open })} ${
             classes.popperNav
-          }
+          }`}
         >
           {({ TransitionProps, placement }) => (
             <Grow

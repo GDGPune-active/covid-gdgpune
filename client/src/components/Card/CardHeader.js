@@ -17,7 +17,7 @@ export default function CardHeader(props) {
   const { className, children, color, plain, stats, icon, ...rest } = props;
   const cardHeaderClasses = classNames({
     [classes.cardHeader]: true,
-    [classes[color + "CardHeader"]]: color,
+    [classes[`${color}CardHeader`]]: color,
     [classes.cardHeaderPlain]: plain,
     [classes.cardHeaderStats]: stats,
     [classes.cardHeaderIcon]: icon,
