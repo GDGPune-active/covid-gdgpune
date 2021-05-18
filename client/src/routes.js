@@ -48,6 +48,7 @@ const dashboardRoutes = [
     icon: Person,
     component: UserProfile,
     layout: "/admin",
+    private: true,
   },
   {
     path: "/table",
@@ -62,19 +63,13 @@ const dashboardRoutes = [
     icon: LibraryBooks,
     component: Typography,
     layout: "/admin",
+    private: true,
   },
   {
     path: "/icons",
     name: "Icons",
     icon: BubbleChart,
     component: Icons,
-    layout: "/admin",
-  },
-  {
-    path: "/maps",
-    name: "Maps",
-    icon: LocationOn,
-    component: Maps,
     layout: "/admin",
   },
   {

@@ -4,6 +4,7 @@
 
 The client code can be found in the `client` folder and the server code can be found in the `server` folder.
 
+
 ### Prerequisites
 
 :writing_hand: What things you need to install the software and how to install them
@@ -29,6 +30,14 @@ cd project
 npm i -g serve
 serve
 ```
+
+#### Steps to configure Firebase in React Frontend
+
++ Visit https://console.firebase.google.com/ and create a Firebase Project (or select existing one.
++ Goto Project Settings and click "Add App" button.
++ Copy Project configuration.
++ Make a duplicate of `.env.sample` and rename it `.env`
++ Paste previously copied configurartions in `.env` file to run the project.
 
 ## Contributing
 
