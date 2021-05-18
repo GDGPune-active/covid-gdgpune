@@ -66,7 +66,7 @@ export default function AdminNavbarLinks() {
       <div className={classes.searchWrapper}>
         <CustomInput
           formControlProps={{
-            className: classes.margin + " " + classes.search,
+            className: `${classes.margin} ${classes.search}`,
           }}
           inputProps={{
             placeholder: "Search",
@@ -114,11 +114,9 @@ export default function AdminNavbarLinks() {
           anchorEl={openNotification}
           transition
           disablePortal
-          className={
-            classNames({ [classes.popperClose]: !openNotification }) +
-            " " +
-            classes.popperNav
-          }
+          className={`${classNames({
+            [classes.popperClose]: !openNotification,
+          })} ${classes.popperNav}`}
         >
           {({ TransitionProps, placement }) => (
             <Grow
@@ -148,7 +146,7 @@ export default function AdminNavbarLinks() {
                       onClick={handleCloseNotification}
                       className={classes.dropdownItem}
                     >
-                      You{"'"}re now friend with Andrew
+                      You're now friend with Andrew
                     </MenuItem>
                     <MenuItem
                       onClick={handleCloseNotification}

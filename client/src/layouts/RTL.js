@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 // creates a beautiful scrollbar
 import PerfectScrollbar from "perfect-scrollbar";
@@ -13,52 +13,34 @@ import FixedPlugin from "components/FixedPlugin/FixedPlugin.js";
 
 import routes from "routes.js";
 
-import styles from "assets/jss/material-dashboard-react/layouts/adminStyle.js";
+import styles from "assets/jss/material-dashboard-react/layouts/rtlStyle.js";
 
 import bgImage from "assets/img/sidebar-2.jpg";
 import logo from "assets/img/reactlogo.png";
-import {
-  Backdrop,
-  Button,
-  Dialog,
-  DialogActions,
-  DialogContent,
-  DialogContentText,
-  DialogTitle,
-  Fade,
-  Modal,
-  Paper,
-  Slide,
-} from "@material-ui/core";
-import Auth from "components/Auth/Auth";
-import firebase from "firebase";
-import CustomRoute from "components/Routes/CustomRoute";
 
 let ps;
 
 const switchRoutes = (
   <Switch>
     {routes.map((prop, key) => {
-      if (prop.layout === "/admin") {
+      if (prop.layout === "/rtl") {
         return (
-          <CustomRoute
-            path={prop.path}
+          <Route
+            path={prop.layout + prop.path}
             component={prop.component}
             key={key}
-            exact
-            auth={prop.private}
           />
         );
       }
       return null;
     })}
-    {/* <Redirect from="/" to="/dashboard" /> */}
+    <Redirect from="/rtl" to="/rtl/rtl-page" />
   </Switch>
 );
 
 const useStyles = makeStyles(styles);
 
-export default function Admin({ ...rest }) {
+export default function RTL({ ...rest }) {
   // styles
   const classes = useStyles();
   // ref to help us initialize PerfectScrollbar on windows devices
@@ -68,7 +50,6 @@ export default function Admin({ ...rest }) {
   const [color, setColor] = React.useState("blue");
   const [fixedClasses, setFixedClasses] = React.useState("dropdown show");
   const [mobileOpen, setMobileOpen] = React.useState(false);
-
   const handleImageClick = (image) => {
     setImage(image);
   };
@@ -109,24 +90,24 @@ export default function Admin({ ...rest }) {
       window.removeEventListener("resize", resizeFunction);
     };
   }, [mainPanel]);
-
   return (
     <div className={classes.wrapper}>
       <Sidebar
         routes={routes}
-        logoText="Creative Tim"
+        logoText="الإبداعية تيم"
         logo={logo}
         image={image}
         handleDrawerToggle={handleDrawerToggle}
         open={mobileOpen}
         color={color}
+        rtlActive
         {...rest}
       />
-      {/* <Auth /> */}
       <div className={classes.mainPanel} ref={mainPanel}>
         <Navbar
           routes={routes}
           handleDrawerToggle={handleDrawerToggle}
+          rtlActive
           {...rest}
         />
         {/* On the /maps route we want the map to be on full screen - this is not possible if the content and conatiner classes are present because they have some paddings which would make the map smaller */}
@@ -138,6 +119,15 @@ export default function Admin({ ...rest }) {
           <div className={classes.map}>{switchRoutes}</div>
         )}
         {getRoute() ? <Footer /> : null}
+        <FixedPlugin
+          handleImageClick={handleImageClick}
+          handleColorClick={handleColorClick}
+          bgColor={color}
+          bgImage={image}
+          handleFixedClick={handleFixedClick}
+          fixedClasses={fixedClasses}
+          rtlActive
+        />
       </div>
     </div>
   );

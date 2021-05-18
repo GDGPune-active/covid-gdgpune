@@ -10,14 +10,14 @@ import Hidden from "@material-ui/core/Hidden";
 // @material-ui/icons
 import Menu from "@material-ui/icons/Menu";
 // core components
-import AdminNavbarLinks from "./AdminNavbarLinks.js";
-import RTLNavbarLinks from "./RTLNavbarLinks.js";
 import Button from "components/CustomButtons/Button.js";
 
-//hooks
+// hooks
 import { useRouteName } from "hooks";
 
 import styles from "assets/jss/material-dashboard-react/components/headerStyle.js";
+import RTLNavbarLinks from "./RTLNavbarLinks.js";
+import AdminNavbarLinks from "./AdminNavbarLinks.js";
 
 const useStyles = makeStyles(styles);
 
@@ -26,7 +26,7 @@ export default function Header(props) {
   const routeName = useRouteName();
   const { color } = props;
   const appBarClasses = classNames({
-    [" " + classes[color]]: color,
+    [` ${classes[color]}`]: color,
   });
   return (
     <AppBar className={classes.appBar + appBarClasses}>
