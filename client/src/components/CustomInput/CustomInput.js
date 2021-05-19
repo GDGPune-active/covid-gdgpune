@@ -28,9 +28,9 @@ export default function CustomInput(props) {
   } = props;
 
   const labelClasses = classNames({
-    [" " + classes.labelRootError]: error,
-    [" " + classes.labelRootSuccess]: success && !error,
-    [" " + classes.labelRTL]: rtlActive,
+    [` ${classes.labelRootError}`]: error,
+    [` ${classes.labelRootSuccess}`]: success && !error,
+    [` ${classes.labelRTL}`]: rtlActive,
   });
   const underlineClasses = classNames({
     [classes.underlineError]: error,
@@ -40,7 +40,7 @@ export default function CustomInput(props) {
   const marginTop = classNames({
     [classes.marginTop]: labelText === undefined,
   });
-  let newInputProps = {
+  const newInputProps = {
     maxLength:
       inputProps && inputProps.maxLength ? inputProps.maxLength : undefined,
     minLength:
@@ -50,7 +50,7 @@ export default function CustomInput(props) {
   return (
     <FormControl
       {...formControlProps}
-      className={formControlProps.className + " " + classes.formControl}
+      className={`${formControlProps.className} ${classes.formControl}`}
     >
       {labelText !== undefined ? (
         <InputLabel
@@ -72,9 +72,9 @@ export default function CustomInput(props) {
         inputProps={newInputProps}
       />
       {error ? (
-        <Clear className={classes.feedback + " " + classes.labelRootError} />
+        <Clear className={`${classes.feedback} ${classes.labelRootError}`} />
       ) : success ? (
-        <Check className={classes.feedback + " " + classes.labelRootSuccess} />
+        <Check className={`${classes.feedback} ${classes.labelRootSuccess}`} />
       ) : null}
     </FormControl>
   );
