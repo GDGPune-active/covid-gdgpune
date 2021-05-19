@@ -6,6 +6,7 @@ cred = credentials.ApplicationDefault()
 firebase_admin.initialize_app(cred, {
   'projectId': 'rustee-prod',
 })
+# projectId mentioned above is your unique project ID, Update this according to your project 
 
 db = firestore.client()
 
