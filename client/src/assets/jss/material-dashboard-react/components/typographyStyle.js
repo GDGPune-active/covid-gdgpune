@@ -21,7 +21,7 @@ const typographyStyle = {
     padding: "10px 20px",
     margin: "0 0 20px",
     fontSize: "17.5px",
-    borderLeft: "5px solid " + grayColor[10],
+    borderLeft: `5px solid ${grayColor[10]}`,
   },
   quoteText: {
     margin: "0 0 10px",

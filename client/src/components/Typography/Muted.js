@@ -11,7 +11,7 @@ export default function Muted(props) {
   const classes = useStyles();
   const { children } = props;
   return (
-    <div className={classes.defaultFontStyle + " " + classes.mutedText}>
+    <div className={`${classes.defaultFontStyle} ${classes.mutedText}`}>
       {children}
     </div>
   );

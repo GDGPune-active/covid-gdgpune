@@ -66,9 +66,7 @@ export default function RTL({ ...rest }) {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-  const getRoute = () => {
-    return window.location.pathname !== "/admin/maps";
-  };
+  const getRoute = () => window.location.pathname !== "/admin/maps";
   const resizeFunction = () => {
     if (window.innerWidth >= 960) {
       setMobileOpen(false);
@@ -96,7 +94,7 @@ export default function RTL({ ...rest }) {
     <div className={classes.wrapper}>
       <Sidebar
         routes={routes}
-        logoText={"الإبداعية تيم"}
+        logoText="الإبداعية تيم"
         logo={logo}
         image={image}
         handleDrawerToggle={handleDrawerToggle}

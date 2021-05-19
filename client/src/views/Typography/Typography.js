@@ -151,9 +151,7 @@ export default function TypographyPage() {
           <h2>
             Header with small subtitle
             <br />
-            <small>
-              Use {'"'}Small{'"'} tag for the headers
-            </small>
+            <small>Use "Small" tag for the headers</small>
           </h2>
         </div>
       </CardBody>

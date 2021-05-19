@@ -3,10 +3,10 @@ import React from "react";
 const Maps = () => {
   const mapRef = React.useRef(null);
   React.useEffect(() => {
-    let google = window.google;
+    const { google } = window;
     let map = mapRef.current;
-    let lat = "40.748817";
-    let lng = "-73.985428";
+    const lat = "40.748817";
+    const lng = "-73.985428";
     const myLatlng = new google.maps.LatLng(lat, lng);
     const mapOptions = {
       zoom: 12,
@@ -88,13 +88,13 @@ const Maps = () => {
       content: contentString,
     });
 
-    google.maps.event.addListener(marker, "click", function () {
+    google.maps.event.addListener(marker, "click", () => {
       infowindow.open(map, marker);
     });
   });
   return (
     <>
-      <div style={{ height: `100vh` }} ref={mapRef}></div>
+      <div style={{ height: `100vh` }} ref={mapRef} />
     </>
   );
 };
