@@ -11,13 +11,13 @@ db = firestore.client()
 
 def createProfile(data, context):
 
-    if 'mobile' in data:
+    if 'phoneNumber' in data:
         uid = data["uid"]
-        mobile = data["mobile"]
+        phone = data["phoneNumber"]
 
         doc_ref = db.collection(u'userProfile').document(uid)    
         doc_ref.set({
-            u'Mobile': mobile
+            u'phone': phone
         })
 
         return True
