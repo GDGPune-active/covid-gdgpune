@@ -8,23 +8,18 @@ import {
   DialogContentText,
   DialogTitle,
   Slide,
-  Step,
-  StepLabel,
-  Stepper,
   TextField,
-  Typography,
 } from "@material-ui/core";
 
 import { useAuthState } from "react-firebase-hooks/auth";
 
 import { firebase_app } from "data/firebase-config";
-import { useForm, Controller } from "react-hook-form";
 import MaterialUiPhoneNumber from "material-ui-phone-number";
 import firebase from "firebase/app";
 import { useHistory } from "react-router";
 
 const Auth = (props) => {
-  const [user, loading, error] = useAuthState(firebase_app.auth());
+  const [user, loading] = useAuthState(firebase_app.auth());
   const [open, setOpen] = useState(false);
   const [phone, setPhone] = useState("");
   const [code, setCode] = useState("");
