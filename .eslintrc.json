@@ -5,11 +5,16 @@
     "prettier/prettier": "error",
     "react/no-unescaped-entities": "off",
     "no-unused-vars": "warn",
-    "react/prop-types": "off"
+    "react/prop-types":"warn"
   },
   "parser": "babel-eslint",
   "env": {
-    "browser": true,
-    "node": true
+      "browser": true,
+      "node": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect" // React version. "detect" automatically picks the version you have installed.
+    }
   }
 }
