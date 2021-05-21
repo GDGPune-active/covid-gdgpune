@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch } from "react-router-dom";
+import { Redirect, Switch } from "react-router-dom";
 // creates a beautiful scrollbar
 import PerfectScrollbar from "perfect-scrollbar";
 import "perfect-scrollbar/css/perfect-scrollbar.css";
@@ -37,7 +37,7 @@ const switchRoutes = (
       }
       return null;
     })}
-    {/* <Redirect from="/" to="/dashboard" /> */}
+    <Redirect from="/" to="/dashboard" />
   </Switch>
 );
 
