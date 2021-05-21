@@ -74,7 +74,7 @@ const Auth = (props) => {
         "sign-in-button",
         {
           size: "invisible",
-          callback: function (response) {
+          callback: function () {
             // reCAPTCHA solved, allow signInWithPhoneNumber.
             login();
           },
@@ -111,16 +111,18 @@ const Auth = (props) => {
         setPhone("");
         setCode("");
         // User signed in successfully.
+        // eslint-disable-next-line no-unused-vars
         const user = result.user;
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
 
         // console.log("SUCCESS");
       })
       .catch((error) => {
-        console.log("ERROR");
+        console.log("ERROR:" + error);
       });
   };
 
+  // eslint-disable-next-line no-unused-vars
   const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="down" ref={ref} {...props} />;
   });
