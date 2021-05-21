@@ -40,7 +40,6 @@ const tableStyle = (theme) => ({
     borderCollapse: "collapse",
   },
   tableHeadCell: {
-    color: "inherit",
     ...defaultFont,
     "&, &$tableCell": {
       fontSize: "1em",
@@ -49,7 +48,6 @@ const tableStyle = (theme) => ({
   tableCell: {
     ...defaultFont,
     lineHeight: "1.42857143",
-    padding: "12px 8px",
     verticalAlign: "middle",
     fontSize: "0.8125rem",
   },
