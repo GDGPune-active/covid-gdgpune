@@ -5,7 +5,7 @@
     "prettier/prettier": "error",
     "react/no-unescaped-entities": "off",
     "no-unused-vars": "warn",
-    "react/prop-types": "warn"
+    "react/prop-types": "off"
   },
   "parser": "babel-eslint",
   "env": {
