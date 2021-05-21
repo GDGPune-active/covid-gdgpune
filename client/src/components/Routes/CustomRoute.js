@@ -3,6 +3,7 @@ import React from "react";
 import { Route } from "react-router";
 
 const CustomRoute = ({ component: Component, auth, ...rest }) => {
+  console.log("helo");
   return (
     <Route
       {...rest}
