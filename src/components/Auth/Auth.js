@@ -11,6 +11,8 @@ import {
   TextField,
 } from "@material-ui/core";
 
+import PropTypes from "prop-types";
+
 import { useAuthState } from "react-firebase-hooks/auth";
 
 import { firebase_app } from "data/firebase-config";
@@ -171,6 +173,12 @@ const Auth = (props) => {
       </DialogActions>
     </Dialog>
   );
+};
+
+Auth.propTypes = {
+  setShowLoginPopup: PropTypes.func,
+  component: PropTypes.any,
+  auth: PropTypes.any,
 };
 
 export default Auth;
