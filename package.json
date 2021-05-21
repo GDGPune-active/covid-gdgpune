@@ -4,11 +4,6 @@
   "description": "Material Dashboard React. Coded by Creative Tim",
   "private": false,
   "main": "dist/index.js",
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint"
-    }
-  },
   "dependencies": {
     "@material-ui/core": "4.11.4",
     "@material-ui/icons": "4.11.2",
@@ -38,7 +33,8 @@
     "lint:check": "eslint . --ext=js,jsx;  exit 0",
     "lint:fix": "eslint . --ext=js,jsx --fix;  exit 0",
     "build-package-css": "cp src/assets/css/material-dashboard-react.css dist/material-dashboard-react.css",
-    "build-package": "npm run build-package-css && babel src --out-dir dist"
+    "build-package": "npm run build-package-css && babel src --out-dir dist",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -67,7 +63,8 @@
     "eslint-plugin-react-hooks": "^1.7.0",
     "gulp": "4.0.2",
     "gulp-append-prepend": "1.0.9",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "husky": "^6.0.0"
   },
   "browserslist": {
     "production": [
