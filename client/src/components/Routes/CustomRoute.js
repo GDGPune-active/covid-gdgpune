@@ -1,8 +1,9 @@
 import Auth from "components/Auth/Auth";
 import React from "react";
-import { Redirect, Route } from "react-router";
+import { Route } from "react-router";
 
 const CustomRoute = ({ component: Component, auth, ...rest }) => {
+  console.log("helo");
   return (
     <Route
       {...rest}

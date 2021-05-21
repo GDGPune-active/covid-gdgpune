@@ -8,23 +8,18 @@ import {
   DialogContentText,
   DialogTitle,
   Slide,
-  Step,
-  StepLabel,
-  Stepper,
   TextField,
-  Typography,
 } from "@material-ui/core";
 
 import { useAuthState } from "react-firebase-hooks/auth";
 
 import { firebase_app } from "data/firebase-config";
-import { useForm, Controller } from "react-hook-form";
 import MaterialUiPhoneNumber from "material-ui-phone-number";
 import firebase from "firebase/app";
 import { useHistory } from "react-router";
 
 const Auth = (props) => {
-  const [user, loading, error] = useAuthState(firebase_app.auth());
+  const [user, loading] = useAuthState(firebase_app.auth());
   const [open, setOpen] = useState(false);
   const [phone, setPhone] = useState("");
   const [code, setCode] = useState("");
@@ -79,7 +74,7 @@ const Auth = (props) => {
         "sign-in-button",
         {
           size: "invisible",
-          callback: function (response) {
+          callback: function () {
             // reCAPTCHA solved, allow signInWithPhoneNumber.
             login();
           },
@@ -116,16 +111,18 @@ const Auth = (props) => {
         setPhone("");
         setCode("");
         // User signed in successfully.
+        // eslint-disable-next-line no-unused-vars
         const user = result.user;
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
 
         // console.log("SUCCESS");
       })
       .catch((error) => {
-        console.log("ERROR");
+        console.log("ERROR:" + error);
       });
   };
 
+  // eslint-disable-next-line no-unused-vars
   const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="down" ref={ref} {...props} />;
   });
