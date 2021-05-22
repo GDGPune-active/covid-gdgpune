@@ -4,9 +4,8 @@ from firebase_admin import firestore
 
 cred = credentials.ApplicationDefault()
 firebase_admin.initialize_app(cred, {
-  'projectId': 'rustee-prod',
+  'projectId': 'gdg-covid', # Update project id as per your unique project ID
 })
-# projectId mentioned above is your unique project ID, Update this according to your project 
 
 db = firestore.client()
 
