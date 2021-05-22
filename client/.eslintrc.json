@@ -2,9 +2,10 @@
   "extends": ["eslint:recommended", "plugin:react/recommended", "prettier"],
   "plugins": ["prettier"],
   "rules": {
-    "prettier/prettier": "error",
+    "prettier/prettier": ["error",{"endofLine": "auto"}],
     "react/no-unescaped-entities": "off",
-    "no-unused-vars": "warn"
+    "no-unused-vars": "warn",
+    "react/prop-types":"warn"
   },
   "parser": "babel-eslint",
   "env": {
