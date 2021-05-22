@@ -47,13 +47,32 @@ export default function Dashboard() {
     <div>
       <GridContainer>
         <GridItem xs={12} sm={6} md={3}>
-          <Card>
+          <Card
+            style={{
+              fontSize: "20px",
+              backgroundColor: "#0000B2",
+              borderRadius: "25px",
+              color: "blue",
+              height: "120px",
+              width: "120px",
+            }}
+          >
             <CardHeader color="warning" stats icon>
               {/* <CardIcon color="warning">
                 <Icon>content_copy</Icon>
               </CardIcon> */}
-              <p className={classes.cardInformation}>Plasma Donor</p>
-              <h3 className={classes.cardInformation}>10</h3>
+              <p
+                style={{ fontSize: "15px", color: "white", fontWeight: "bold" }}
+                className={classes.cardInformation}
+              >
+                Plasma Donor
+              </p>
+              <h3
+                style={{ fontSize: "25px", color: "white", fontWeight: "bold" }}
+                className={classes.cardInformation}
+              >
+                20
+              </h3>
             </CardHeader>
             {/* <CardFooter stats>
               <div className={classes.stats}>
@@ -68,13 +87,32 @@ export default function Dashboard() {
           </Card>
         </GridItem>
         <GridItem xs={12} sm={6} md={3}>
-          <Card>
+          <Card
+            style={{
+              fontSize: "20px",
+              backgroundColor: "#0000B2",
+              borderRadius: "25px",
+              color: "white",
+              height: "120px",
+              width: "120px",
+            }}
+          >
             <CardHeader color="success" stats icon>
               {/*<CardIcon color="success">
                 <Store />
               </CardIcon>*/}
-              <p className={classes.cardInformation}>Beds</p>
-              <h3 className={classes.cardInformation}>25</h3>
+              <p
+                style={{ fontSize: "15px", color: "white", fontWeight: "bold" }}
+                className={classes.cardInformation}
+              >
+                Beds
+              </p>
+              <h3
+                style={{ fontSize: "25px", color: "white", fontWeight: "bold" }}
+                className={classes.cardInformation}
+              >
+                30
+              </h3>
             </CardHeader>
             {/* <CardFooter stats>
               <div className={classes.stats}>
@@ -85,13 +123,32 @@ export default function Dashboard() {
           </Card>
         </GridItem>
         <GridItem xs={12} sm={6} md={3}>
-          <Card>
+          <Card
+            style={{
+              fontSize: "20px",
+              backgroundColor: "#0000B2",
+              borderRadius: "25px",
+              color: "white",
+              height: "120px",
+              width: "120px",
+            }}
+          >
             <CardHeader color="danger" stats icon>
               {/*<CardIcon color="danger">
                 <Icon>info_outline</Icon>
               </CardIcon>*/}
-              <p className={classes.cardInformation}>Oxygen Cylinders</p>
-              <h3 className={classes.cardInformation}>19</h3>
+              <p
+                style={{ fontSize: "15px", color: "white", fontWeight: "bold" }}
+                className={classes.cardInformation}
+              >
+                Oxygen Cylinders
+              </p>
+              <h3
+                style={{ fontSize: "25px", color: "white", fontWeight: "bold" }}
+                className={classes.cardInformation}
+              >
+                40
+              </h3>
             </CardHeader>
             {/* <CardFooter stats>
               <div className={classes.stats}>
@@ -102,13 +159,32 @@ export default function Dashboard() {
           </Card>
         </GridItem>
         <GridItem xs={12} sm={6} md={3}>
-          <Card>
+          <Card
+            style={{
+              fontSize: "20px",
+              backgroundColor: "#0000B2",
+              borderRadius: "25px",
+              color: "blue",
+              height: "120px",
+              width: "120px",
+            }}
+          >
             <CardHeader color="info" stats icon>
               {/*<CardIcon color="info">
                 <Accessibility />
               </CardIcon>*/}
-              <p className={classes.cardInformation}>Food Donation</p>
-              <h3 className={classes.cardInformation}>19</h3>
+              <p
+                style={{ fontSize: "15px", color: "white", fontWeight: "bold" }}
+                className={classes.cardInformation}
+              >
+                Food Donation
+              </p>
+              <h3
+                style={{ fontSize: "25px", color: "white", fontWeight: "bold" }}
+                className={classes.cardInformation}
+              >
+                50
+              </h3>
             </CardHeader>
             {/* <CardFooter stats>
               <div className={classes.stats}>
