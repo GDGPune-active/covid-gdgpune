@@ -63,6 +63,12 @@ const dashboardStyle = {
       lineHeight: "1",
     },
   },
+  cardInformation: {
+    color: "blue",
+    textAlign: "center",
+    fontFamily: "'Noto Sans JP', sans-serif",
+    fontSize: "25px",
+  },
   cardTitleWhite: {
     color: whiteColor,
     marginTop: "0px",

@@ -52,10 +52,10 @@ export default function Dashboard() {
               {/* <CardIcon color="warning">
                 <Icon>content_copy</Icon>
               </CardIcon> */}
-              <p className={classes.cardCategory}>Plasma Donor</p>
-              <h3 className={classes.cardTitle}>10</h3>
+              <p className={classes.cardInformation}>Plasma Donor</p>
+              <h3 className={classes.cardInformation}>10</h3>
             </CardHeader>
-            <CardFooter stats>
+            {/* <CardFooter stats>
               <div className={classes.stats}>
                 <Danger>
                   <Warning />
@@ -64,7 +64,7 @@ export default function Dashboard() {
                   Get more space
                 </a>
               </div>
-            </CardFooter>
+            </CardFooter> */}
           </Card>
         </GridItem>
         <GridItem xs={12} sm={6} md={3}>
@@ -73,15 +73,15 @@ export default function Dashboard() {
               {/*<CardIcon color="success">
                 <Store />
               </CardIcon>*/}
-              <p className={classes.cardCategory}>Beds</p>
-              <h3 className={classes.cardTitle}>25</h3>
+              <p className={classes.cardInformation}>Beds</p>
+              <h3 className={classes.cardInformation}>25</h3>
             </CardHeader>
-            <CardFooter stats>
+            {/* <CardFooter stats>
               <div className={classes.stats}>
                 <DateRange />
                 Last 24 Hours
               </div>
-            </CardFooter>
+            </CardFooter> */}
           </Card>
         </GridItem>
         <GridItem xs={12} sm={6} md={3}>
@@ -90,15 +90,15 @@ export default function Dashboard() {
               {/*<CardIcon color="danger">
                 <Icon>info_outline</Icon>
               </CardIcon>*/}
-              <p className={classes.cardCategory}>Oxygen Cylinders</p>
-              <h3 className={classes.cardTitle}>19</h3>
+              <p className={classes.cardInformation}>Oxygen Cylinders</p>
+              <h3 className={classes.cardInformation}>19</h3>
             </CardHeader>
-            <CardFooter stats>
+            {/* <CardFooter stats>
               <div className={classes.stats}>
                 <LocalOffer />
                 Tracked from Github
               </div>
-            </CardFooter>
+            </CardFooter> */}
           </Card>
         </GridItem>
         <GridItem xs={12} sm={6} md={3}>
@@ -107,15 +107,15 @@ export default function Dashboard() {
               {/*<CardIcon color="info">
                 <Accessibility />
               </CardIcon>*/}
-              <p className={classes.cardCategory}>Food Donation</p>
-              <h3 className={classes.cardTitle}>19</h3>
+              <p className={classes.cardInformation}>Food Donation</p>
+              <h3 className={classes.cardInformation}>19</h3>
             </CardHeader>
-            <CardFooter stats>
+            {/* <CardFooter stats>
               <div className={classes.stats}>
                 <Update />
                 Just Updated
               </div>
-            </CardFooter>
+            </CardFooter> */}
           </Card>
         </GridItem>
       </GridContainer>
