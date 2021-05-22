@@ -22,12 +22,12 @@ import Button from "components/CustomButtons/Button.js";
 import styles from "assets/jss/material-dashboard-react/components/headerLinksStyle.js";
 import { firebase_app } from "data/firebase-config";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { Redirect } from "react-router";
 import Auth from "components/Auth/Auth";
 
 const useStyles = makeStyles(styles);
 
 export default function AdminNavbarLinks() {
+  // eslint-disable-next-line no-unused-vars
   const [user, loading, error] = useAuthState(firebase_app.auth());
 
   const classes = useStyles();
