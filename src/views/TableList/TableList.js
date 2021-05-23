@@ -47,61 +47,71 @@ export default function TableList() {
     <GridContainer>
       <GridItem xs={12} sm={12} md={12}>
         <Card>
-          <CardHeader color="primary">
-            <h4 className={classes.cardTitleWhite}>Simple Table</h4>
+          <CardHeader style={{ backgroundColor: "#343a40" }} color="primary">
+            <h4 className={classes.cardTitleWhite}>COVID-19 Beds</h4>
             <p className={classes.cardCategoryWhite}>
-              Here is a subtitle for this table
+              Verified list of beds available through Pune.
             </p>
           </CardHeader>
           <CardBody>
             <Table
               tableHeaderColor="primary"
-              tableHead={["Name", "Country", "City", "Salary"]}
-              tableData={[
-                ["Dakota Rice", "Niger", "Oud-Turnhout", "$36,738"],
-                ["Minerva Hooper", "Curaçao", "Sinaai-Waas", "$23,789"],
-                ["Sage Rodriguez", "Netherlands", "Baileux", "$56,142"],
-                ["Philip Chaney", "Korea, South", "Overland Park", "$38,735"],
-                ["Doris Greene", "Malawi", "Feldkirchen in Kärnten", "$63,542"],
-                ["Mason Porter", "Chile", "Gloucester", "$78,615"],
+              tableHead={[
+                "Name",
+                "Without Oxygen",
+                "With Oxygen",
+                "ICU Without Ventilator",
+                "ICU With Ventilator",
               ]}
-            />
-          </CardBody>
-        </Card>
-      </GridItem>
-      <GridItem xs={12} sm={12} md={12}>
-        <Card plain>
-          <CardHeader plain color="primary">
-            <h4 className={classes.cardTitleWhite}>
-              Table on Plain Background
-            </h4>
-            <p className={classes.cardCategoryWhite}>
-              Here is a subtitle for this table
-            </p>
-          </CardHeader>
-          <CardBody>
-            <Table
-              tableHeaderColor="primary"
-              tableHead={["ID", "Name", "Country", "City", "Salary"]}
               tableData={[
-                ["1", "Dakota Rice", "$36,738", "Niger", "Oud-Turnhout"],
-                ["2", "Minerva Hooper", "$23,789", "Curaçao", "Sinaai-Waas"],
-                ["3", "Sage Rodriguez", "$56,142", "Netherlands", "Baileux"],
-                [
-                  "4",
-                  "Philip Chaney",
-                  "$38,735",
-                  "Korea, South",
-                  "Overland Park",
-                ],
-                [
-                  "5",
-                  "Doris Greene",
-                  "$63,542",
-                  "Malawi",
-                  "Feldkirchen in Kärnten",
-                ],
-                ["6", "Mason Porter", "$78,615", "Chile", "Gloucester"],
+                {
+                  name: "Aadhar Hospital",
+                  address: "Pune",
+                  contact: "9225620504",
+                  beds: [0, 46, 5, 0],
+                  total: [0, 520, 119, 61],
+                  verified_at: "10:03 PM, May 21",
+                },
+                {
+                  name: "Ace Hospital Pune",
+                  address: "Pune",
+                  contact: "9423005023",
+                  beds: [11, 9, 0, 0],
+                  total: [22, 19, 1, 3],
+                  verified_at: "10:03 PM, May 21",
+                },
+                {
+                  name: "Bharati Hospital",
+                  address: "Pune",
+                  contact: "9730682657 9881895957",
+                  beds: [0, 26, 2, 0],
+                  total: [0, 29, 6, 1],
+                  verified_at: "10:03 PM, May 21",
+                },
+                {
+                  name: "Chaitanya hospital",
+                  address: "Pune",
+                  contact: "9158003439",
+                  beds: [4, 0, 0, 0],
+                  total: [29, 56, 4, 11],
+                  verified_at: "10:03 PM, May 21",
+                },
+                {
+                  name: "GMF Ruby Hall Clinic",
+                  address: "Pune",
+                  contact: "9890300503 8108595899",
+                  beds: [10, 18, 0, 0],
+                  total: [10, 20, 0, 0],
+                  verified_at: "10:03 PM, May 21",
+                },
+                {
+                  name: "Hardikar Hospital ",
+                  address: "Pune",
+                  contact: "7774064091",
+                  beds: [170, 160, 2, 2],
+                  total: [190, 182, 12, 18],
+                  verified_at: "10:03 PM, May 21",
+                },
               ]}
             />
           </CardBody>

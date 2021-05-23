@@ -47,8 +47,8 @@ const dashboardRoutes = [
     private: true,
   },
   {
-    path: "/table",
-    name: "Table List",
+    path: "/beds",
+    name: "Beds",
     icon: "content_paste",
     component: TableList,
     layout: "/admin",
