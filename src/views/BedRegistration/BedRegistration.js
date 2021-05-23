@@ -4,7 +4,7 @@ import Select from "@material-ui/core/Select";
 import {
   MuiPickersUtilsProvider,
   KeyboardTimePicker,
-  KeyboardDatePicker
+  KeyboardDatePicker,
 } from "@material-ui/pickers";
 import GridItem from "components/Grid/GridItem.js";
 import "date-fns";
@@ -21,13 +21,13 @@ import CardFooter from "components/Card/CardFooter.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import MaterialUiPhoneNumber from "material-ui-phone-number";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   cardCategoryWhite: {
     color: "rgba(255,255,255,.62)",
     margin: "0",
     fontSize: "14px",
     marginTop: "0",
-    marginBottom: "0"
+    marginBottom: "0",
   },
   cardTitleWhite: {
     color: "#FFFFFF",
@@ -36,8 +36,8 @@ const useStyles = makeStyles(theme => ({
     fontWeight: "300",
     fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
     marginBottom: "3px",
-    textDecoration: "none"
-  }
+    textDecoration: "none",
+  },
 }));
 
 export default function BedRegistration() {
@@ -48,19 +48,19 @@ export default function BedRegistration() {
     ["bedType"]: "Without Oxygen",
     ["date"]: new Date(),
     ["vacantNo"]: 0,
-    ["phone"]: ""
+    ["phone"]: "",
   });
-  const handleChange = event => {
+  const handleChange = (event) => {
     console.log(event);
     if (event) {
-      setFieldvalues(fieldValues => ({
+      setFieldvalues((fieldValues) => ({
         ...fieldValues,
-        [event.target.name]: event.target.value
+        [event.target.name]: event.target.value,
       }));
     }
   };
 
-  const handleSubmit = event => {
+  const handleSubmit = (event) => {
     console.log(fieldValues);
     event.preventDefault();
   };
@@ -150,7 +150,7 @@ export default function BedRegistration() {
                     value={fieldValues.date}
                     onChange={handleChange}
                     KeyboardButtonProps={{
-                      "aria-label": "change date"
+                      "aria-label": "change date",
                     }}
                   />
                 </GridItem>
@@ -163,7 +163,7 @@ export default function BedRegistration() {
                     value={fieldValues.date}
                     onChange={handleChange}
                     KeyboardButtonProps={{
-                      "aria-label": "change time"
+                      "aria-label": "change time",
                     }}
                   />
                 </GridItem>

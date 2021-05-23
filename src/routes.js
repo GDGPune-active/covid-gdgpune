@@ -30,6 +30,7 @@ import Typography from "views/Typography/Typography.js";
 import Icons from "views/Icons/Icons.js";
 import NotificationsPage from "views/Notifications/Notifications.js";
 import BedRegistration from "views/BedRegistration/BedRegistration.js";
+import SpeakerNotesIcon from "@material-ui/icons/SpeakerNotes";
 // core components/views for RTL layout
 
 const dashboardRoutes = [
@@ -38,7 +39,7 @@ const dashboardRoutes = [
     name: "Dashboard",
     icon: Dashboard,
     component: DashboardPage,
-    layout: "/admin"
+    layout: "/admin",
   },
   {
     path: "/user",
@@ -46,14 +47,14 @@ const dashboardRoutes = [
     icon: Person,
     component: UserProfile,
     layout: "/admin",
-    private: true
+    private: true,
   },
   {
     path: "/beds",
     name: "Beds",
     icon: "content_paste",
     component: TableList,
-    layout: "/admin"
+    layout: "/admin",
   },
   {
     path: "/typography",
@@ -61,30 +62,30 @@ const dashboardRoutes = [
     icon: LibraryBooks,
     component: Typography,
     layout: "/admin",
-    private: true
+    private: true,
   },
   {
     path: "/icons",
     name: "Icons",
     icon: BubbleChart,
     component: Icons,
-    layout: "/admin"
+    layout: "/admin",
   },
   {
     path: "/notifications",
     name: "Notifications",
     icon: Notifications,
     component: NotificationsPage,
-    layout: "/admin"
+    layout: "/admin",
   },
   {
     path: "/addBed",
     name: "Bed Data",
-    icon: Notifications,
+    icon: SpeakerNotesIcon,
     component: BedRegistration,
     layout: "/admin",
-    private: true
-  }
+    private: true,
+  },
 ];
 
 export default dashboardRoutes;
