@@ -56,54 +56,60 @@ export default function TableList() {
           <CardBody>
             <Table
               tableHeaderColor="primary"
-              tableHead={["Name", "Verified At", "Type", "Vacant"]}
+              tableHead={[
+                "Name",
+                "Without Oxygen",
+                "With Oxygen",
+                "ICU Without Ventilator",
+                "ICU With Ventilator",
+              ]}
               tableData={[
                 {
                   name: "Aadhar Hospital",
                   address: "Pune",
                   contact: "9225620504",
-                  type: "Covid Bed",
-                  vacant: 123,
+                  beds: [0, 46, 5, 0],
+                  total: [0, 520, 119, 61],
                   verified_at: "10:03 PM, May 21",
                 },
                 {
                   name: "Ace Hospital Pune",
                   address: "Pune",
                   contact: "9423005023",
-                  type: "Covid Oxygenbed",
-                  vacant: 358,
+                  beds: [11, 9, 0, 0],
+                  total: [22, 19, 1, 3],
                   verified_at: "10:03 PM, May 21",
                 },
                 {
                   name: "Bharati Hospital",
                   address: "Pune",
                   contact: "9730682657 9881895957",
-                  type: "Covid Bed",
-                  vacant: 56,
+                  beds: [0, 26, 2, 0],
+                  total: [0, 29, 6, 1],
                   verified_at: "10:03 PM, May 21",
                 },
                 {
                   name: "Chaitanya hospital",
                   address: "Pune",
                   contact: "9158003439",
-                  type: "Covid ICU Beds",
-                  vacant: 157,
+                  beds: [4, 0, 0, 0],
+                  total: [29, 56, 4, 11],
                   verified_at: "10:03 PM, May 21",
                 },
                 {
                   name: "GMF Ruby Hall Clinic",
                   address: "Pune",
                   contact: "9890300503 8108595899",
-                  type: "Ventilators",
-                  vacant: 0,
+                  beds: [10, 18, 0, 0],
+                  total: [10, 20, 0, 0],
                   verified_at: "10:03 PM, May 21",
                 },
                 {
                   name: "Hardikar Hospital ",
                   address: "Pune",
                   contact: "7774064091",
-                  type: "Covid Bed",
-                  vacant: 123,
+                  beds: [170, 160, 2, 2],
+                  total: [190, 182, 12, 18],
                   verified_at: "10:03 PM, May 21",
                 },
               ]}

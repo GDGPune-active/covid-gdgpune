@@ -37,7 +37,7 @@ function Row(props) {
   return (
     <React.Fragment>
       <TableRow className={classes.root}>
-        <TableCell>
+        <TableCell style={{ textAlign: "center" }}>
           <IconButton
             aria-label="expand row"
             size="small"
@@ -46,12 +46,13 @@ function Row(props) {
             <AiOutlineDown />
           </IconButton>
         </TableCell>
-        <TableCell component="th" scope="row">
-          {row.name}
-        </TableCell>
-        <TableCell>{row.verified_at}</TableCell>
-        <TableCell>{row.type}</TableCell>
-        <TableCell>{row.vacant}</TableCell>
+        <TableCell style={{ textAlign: "center" }}>{row.name}</TableCell>
+        {row.beds &&
+          row.beds.map((bed, i) => (
+            <TableCell key={row.name + i} style={{ textAlign: "center" }}>
+              {bed + " / " + row.total[i]}
+            </TableCell>
+          ))}
       </TableRow>
       <TableRow>
         <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
@@ -59,6 +60,7 @@ function Row(props) {
             <Box margin={1}>
               <p>{row.name}</p>
               <p>{row.address}</p>
+              <p>Verified at: {row.verified_at}</p>
               <strong>
                 Tap to call:
                 {row.contact &&
@@ -90,8 +92,8 @@ Row.propTypes = {
     name: PropTypes.string.isRequired,
     address: PropTypes.string.isRequired,
     contact: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired,
-    vacant: PropTypes.number.isRequired,
+    beds: PropTypes.array.isRequired,
+    total: PropTypes.array.isRequired,
     verified_at: PropTypes.string.isRequired,
   }).isRequired,
 };
@@ -109,6 +111,7 @@ export default function CustomTable(props) {
               {tableHead.map((prop, key) => (
                 <TableCell
                   className={`${classes.tableCell} ${classes.tableHeadCell}`}
+                  style={{ textAlign: "center" }}
                   key={key}
                 >
                   {prop}
@@ -142,5 +145,5 @@ CustomTable.propTypes = {
     "gray",
   ]),
   tableHead: PropTypes.arrayOf(PropTypes.string),
-  tableData: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)),
+  tableData: PropTypes.array.isRequired,
 };
