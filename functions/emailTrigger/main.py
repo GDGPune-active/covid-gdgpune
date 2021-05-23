@@ -9,7 +9,7 @@ def sendCustomEmail(email, msg):
         print(senderEmail)
         smtp.login(senderEmail, senderPassword)
 
-        smtp.sendmail('amansaini17675@gmail.com', 'amansaini7999@gmail.com', msg)
+        smtp.sendmail(senderEmail, email, msg)
 
     return True
 
