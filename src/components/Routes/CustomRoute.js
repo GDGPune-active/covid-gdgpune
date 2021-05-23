@@ -4,7 +4,6 @@ import { Route } from "react-router";
 import PropTypes from "prop-types";
 
 const CustomRoute = ({ component: Component, auth, ...rest }) => {
-  console.log("helo");
   return (
     <Route
       {...rest}

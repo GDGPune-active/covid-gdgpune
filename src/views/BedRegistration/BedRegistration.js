@@ -54,10 +54,9 @@ export default function BedRegistration() {
     ["bedType"]: "Without Oxygen",
     ["date"]: new Date(),
     ["vacantNo"]: 0,
-    ["phone"]: "",
+    ["contact"]: "",
   });
   const handleChange = (event) => {
-    console.log(event);
     if (event) {
       setFieldvalues((fieldValues) => ({
         ...fieldValues,
