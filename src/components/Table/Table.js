@@ -60,7 +60,8 @@ function Row(props) {
             <Box margin={1}>
               <p>{row.name}</p>
               <p>{row.address}</p>
-              <p>Verified at: {row.verified_at}</p>
+              <p style={{ color: "#f00" }}>Not Verified</p>
+              {/* <p>Verified at: {row.verified_at}</p> */}
               <strong>
                 Tap to call:
                 {row.contact &&
