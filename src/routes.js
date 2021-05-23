@@ -52,7 +52,7 @@ const dashboardRoutes = [
   // },
   {
     path: "/beds",
-    name: "Beds",
+    name: "Available Beds",
     icon: HotelIcon,
     component: Beds,
     layout: "/admin",
