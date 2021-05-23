@@ -72,7 +72,7 @@ export default function BedRegistration() {
       db.collection("userProfiles")
         .doc(user.uid)
         .collection("hospitalBeds")
-        .set({ ...fieldValues });
+        .add({ ...fieldValues });
     }
   };
   return (
