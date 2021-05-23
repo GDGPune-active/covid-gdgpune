@@ -137,7 +137,7 @@ export default function Notifications() {
             target="_blank"
             href="https://www.creative-tim.com/?ref=mdr-notifications-page"
           >
-            Creative Tim
+            GDG Pune
           </a>
           . Please checkout the{" "}
           <a href="#pablo" target="_blank">
