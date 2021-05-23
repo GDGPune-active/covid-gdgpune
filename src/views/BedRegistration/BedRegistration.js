@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import TextField from "@material-ui/core/TextField";
 import Select from "@material-ui/core/Select";
@@ -20,6 +21,9 @@ import CardBody from "components/Card/CardBody.js";
 import CardFooter from "components/Card/CardFooter.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import MaterialUiPhoneNumber from "material-ui-phone-number";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { firebase_app } from "data/firebase-config";
+import { db } from "data/firebase-config";
 
 const useStyles = makeStyles(() => ({
   cardCategoryWhite: {
@@ -42,6 +46,8 @@ const useStyles = makeStyles(() => ({
 
 export default function BedRegistration() {
   const classes = useStyles();
+  const [user, loading, error] = useAuthState(firebase_app.auth());
+
   const [fieldValues, setFieldvalues] = useState({
     ["name"]: " ",
     ["address"]: " ",
@@ -61,8 +67,13 @@ export default function BedRegistration() {
   };
 
   const handleSubmit = (event) => {
-    console.log(fieldValues);
     event.preventDefault();
+    if (user) {
+      db.collection("userProfiles")
+        .doc(user.uid)
+        .collection("hospitalBeds")
+        .set({ ...fieldValues });
+    }
   };
   return (
     <GridContainer>
@@ -80,7 +91,7 @@ export default function BedRegistration() {
                 <TextField
                   required
                   id="standard-required"
-                  label="Name"
+                  label="Hospital Name"
                   name="name"
                   value={fieldValues.name}
                   onChange={handleChange}
@@ -89,9 +100,19 @@ export default function BedRegistration() {
                 />
               </GridItem>
               <GridItem xs={12} sm={12} md={5}>
-                <MaterialUiPhoneNumber
+                {/* <MaterialUiPhoneNumber
                   name="phone"
                   label="Hospital Phone Number"
+                  data-cy="user-phone"
+                  defaultCountry={"in"}
+                  countryCodeEditable={false}
+                  value={fieldValues.phone}
+                  onChange={handleChange}
+                  margin="normal"
+                /> */}
+                <TextField
+                  name="contact"
+                  label="Hospital Contact Number"
                   data-cy="user-phone"
                   defaultCountry={"in"}
                   countryCodeEditable={false}
