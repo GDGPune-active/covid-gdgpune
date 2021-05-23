@@ -49,8 +49,8 @@ export default function BedRegistration() {
   const [user, loading, error] = useAuthState(firebase_app.auth());
 
   const [fieldValues, setFieldvalues] = useState({
-    ["name"]: " ",
-    ["address"]: " ",
+    ["name"]: "",
+    ["address"]: "",
     ["bedType"]: "Without Oxygen",
     ["date"]: new Date(),
     ["vacantNo"]: 0,
@@ -73,6 +73,15 @@ export default function BedRegistration() {
         .collection("hospitalBeds")
         .add({ ...fieldValues });
     }
+    alert("Your data is successfully submitted");
+    setFieldvalues({
+      ["name"]: "",
+      ["address"]: "",
+      ["bedType"]: "Without Oxygen",
+      ["date"]: new Date(),
+      ["vacantNo"]: 0,
+      ["contact"]: "",
+    });
   };
   return (
     <GridContainer>
