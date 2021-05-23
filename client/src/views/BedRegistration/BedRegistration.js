@@ -19,6 +19,7 @@ import CardHeader from "components/Card/CardHeader.js";
 import CardBody from "components/Card/CardBody.js";
 import CardFooter from "components/Card/CardFooter.js";
 import GridContainer from "components/Grid/GridContainer.js";
+import MaterialUiPhoneNumber from "material-ui-phone-number";
 
 const useStyles = makeStyles(theme => ({
   cardCategoryWhite: {
@@ -42,11 +43,12 @@ const useStyles = makeStyles(theme => ({
 export default function BedRegistration() {
   const classes = useStyles();
   const [fieldValues, setFieldvalues] = useState({
-    ["name"]: "",
-    ["address"]: "",
-    ["bedType"]: "Covid Bed",
+    ["name"]: " ",
+    ["address"]: " ",
+    ["bedType"]: "Without Oxygen",
     ["date"]: new Date(),
-    ["vacantNo"]: 0
+    ["vacantNo"]: 0,
+    ["phone"]: ""
   });
   const handleChange = event => {
     console.log(event);
@@ -74,7 +76,7 @@ export default function BedRegistration() {
           </CardHeader>
           <CardBody className={classes.cardCategoryWhite}>
             <GridContainer>
-              <GridItem xs={12} sm={12} md={10}>
+              <GridItem xs={12} sm={12} md={5}>
                 <TextField
                   required
                   id="standard-required"
@@ -83,19 +85,19 @@ export default function BedRegistration() {
                   value={fieldValues.name}
                   onChange={handleChange}
                   fullWidth
+                  margin="normal"
                 />
               </GridItem>
-              <GridItem xs={12} sm={12} md={10}>
-                <TextField
-                  label="Address"
-                  id="standard-multiline-flexible"
-                  name="address"
-                  multiline
-                  required
-                  rowsMax={4}
-                  value={fieldValues.address}
+              <GridItem xs={12} sm={12} md={5}>
+                <MaterialUiPhoneNumber
+                  name="phone"
+                  label="Hospital Phone Number"
+                  data-cy="user-phone"
+                  defaultCountry={"in"}
+                  countryCodeEditable={false}
+                  value={fieldValues.phone}
                   onChange={handleChange}
-                  fullWidth
+                  margin="normal"
                 />
               </GridItem>
               <GridItem xs={12} sm={12} md={5}>
@@ -111,12 +113,16 @@ export default function BedRegistration() {
                     label="Bed Type"
                     name="bedType"
                     fullWidth
+                    margin="normal"
                   >
-                    <MenuItem value={"Covid Bed"}>Covid Bed</MenuItem>
-                    <MenuItem value={"Covid Oxygen Bed"}>
-                      Covid Oxygen Bed
+                    <MenuItem value={"Without Oxygen"}>Without Oxygen</MenuItem>
+                    <MenuItem value={"With Oxygen"}>With Oxygen</MenuItem>
+                    <MenuItem value={"ICU without Ventilator"}>
+                      ICU without Ventilator
                     </MenuItem>
-                    <MenuItem value={"Covid ICU Bed"}>Covid ICU Bed</MenuItem>
+                    <MenuItem value={"ICU with Ventilator"}>
+                      ICU with Ventilator
+                    </MenuItem>
                   </Select>
                 </Grid>
               </GridItem>
@@ -129,7 +135,6 @@ export default function BedRegistration() {
                   name="vacantNo"
                   value={fieldValues.vacantNo}
                   onChange={handleChange}
-                  fullWidth
                 />
               </GridItem>
               <MuiPickersUtilsProvider utils={DateFnsUtils}>
@@ -163,6 +168,19 @@ export default function BedRegistration() {
                   />
                 </GridItem>
               </MuiPickersUtilsProvider>
+              <GridItem xs={12} sm={12} md={8}>
+                <TextField
+                  label="Address"
+                  id="standard-multiline-flexible"
+                  name="address"
+                  multiline
+                  required
+                  rowsMax={4}
+                  value={fieldValues.address}
+                  onChange={handleChange}
+                  fullWidth
+                />
+              </GridItem>
             </GridContainer>
           </CardBody>
           <CardFooter>
