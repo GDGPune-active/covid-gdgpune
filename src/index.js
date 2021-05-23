@@ -1,14 +1,13 @@
 /*!
 
 =========================================================
-* Material Dashboard React - v1.10.0
+* COVID Support Platform - GDG Pune
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/material-dashboard-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/material-dashboard-react/blob/master/LICENSE.md)
+* Product Page: <TODO: Add URL>
+* Copyright 2021 GDG Pune
 
-* Coded by Creative Tim
+* Coded by GDG Pune
 
 =========================================================
 

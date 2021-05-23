@@ -1,7 +1,7 @@
 {
-  "name": "material-dashboard-react",
+  "name": "covid-support-platform",
   "version": "1.10.0",
-  "description": "Material Dashboard React. Coded by Creative Tim",
+  "description": "COVID Support Platform for Pune",
   "private": false,
   "main": "dist/index.js",
   "dependencies": {
@@ -45,7 +45,7 @@
     "url": "git+https://github.com/GDGPune-active/covid-gdgpune.git"
   },
   "keywords": [],
-  "author": "Creative Tim <hello@creative-tim.com> (https://www.creative-tim.com/)",
+  "author": "Rohan Lekhwani Chinmay Atrawalkar Aman Saini Krishnan Raghavan Raghavi Adoni Pranav Jeurkar",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/GDGPune-active/covid-gdgpune/issues"
