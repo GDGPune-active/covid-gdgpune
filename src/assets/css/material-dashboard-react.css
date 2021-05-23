@@ -58,6 +58,51 @@
   fill: rgba(0, 0, 0, 0.4);
   line-height: 1;
 }
+
+.signin-dialog {
+  padding: 5px;
+  margin: 2%;
+  border-radius: 2%;
+  padding-bottom: 0.7rem;
+}
+
+.app-icons {
+  margin: auto;
+}
+
+.signin-p {
+  width: 70%;
+  text-align: center;
+  border-bottom: inset grey;
+  line-height: 0.1em;
+  margin: 10px auto 20px auto;
+}
+
+p span {
+  background: #fff;
+  padding: 0 10px 0 10px;
+}
+
+.btn {
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Blue */
+.info {
+  border-color: #2196f3;
+  color: dodgerblue;
+}
+
+.info:hover {
+  background: #2196f3;
+  color: white;
+}
+
 html * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

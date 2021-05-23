@@ -21,7 +21,7 @@ import CardFooter from "components/Card/CardFooter.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import MaterialUiPhoneNumber from "material-ui-phone-number";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   cardCategoryWhite: {
     color: "rgba(255,255,255,.62)",
     margin: "0",
