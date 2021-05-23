@@ -68,7 +68,7 @@ export default function BedRegistration() {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (user) {
-      db.collection("userProfiles")
+      db.collection("userProfile")
         .doc(user.uid)
         .collection("hospitalBeds")
         .add({ ...fieldValues });
