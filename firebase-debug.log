@@ -1,0 +1,140 @@
+[debug] [2021-05-20T14:20:06.927Z] ----------------------------------------------------------------------
+[debug] [2021-05-20T14:20:06.929Z] Command:       /home/chinmay/.nvm/versions/node/v14.17.0/bin/node /home/chinmay/.nvm/versions/node/v14.17.0/bin/firebase init hosting --debug
+[debug] [2021-05-20T14:20:06.929Z] CLI Version:   9.11.0
+[debug] [2021-05-20T14:20:06.929Z] Platform:      linux
+[debug] [2021-05-20T14:20:06.929Z] Node Version:  v14.17.0
+[debug] [2021-05-20T14:20:06.930Z] Time:          Thu May 20 2021 19:50:06 GMT+0530 (India Standard Time)
+[debug] [2021-05-20T14:20:06.930Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-05-20T14:20:06.934Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-05-20T14:20:06.936Z] > authorizing via signed-in user (gdgwtmpunedev@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/chinmay/Projects/covid-gdgpune/client
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2021-05-20T14:20:08.193Z] > refreshing access token with scopes: []
+[debug] [2021-05-20T14:20:08.194Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-05-20T14:20:08.580Z] <<< HTTP RESPONSE 200 {"date":"Thu, 20 May 2021 14:20:08 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-05-20T14:20:08.594Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2021-05-20T14:20:09.198Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2021-05-20T14:20:09.198Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project gdg-covid (GDG-Covid) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2021-05-20T14:20:17.059Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2021-05-20T14:20:17.262Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2021-05-20T14:20:17.262Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"8.6.1","browserURL":"https://www.gstatic.com/firebasejs/8.6.1/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/8.6.1/firebase.tgz"},"live":{"version":"8.6","browserURL":"https://www.gstatic.com/firebasejs/live/8.6/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/8.6/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/8.6.1/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js","database":"https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js","firestore":"https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js","functions":"https://www.gstatic.com/firebasejs/8.6.1/firebase-functions.js","installations":"https://www.gstatic.com/firebasejs/8.6.1/firebase-installations.js","messaging":"https://www.gstatic.com/firebasejs/8.6.1/firebase-messaging.js","storage":"https://www.gstatic.com/firebasejs/8.6.1/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/8.6.1/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/8.6.1/firebase-remote-config.js","firestore.memory":"https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.memory.js"}}
+[info] i  Skipping write of build/index.html 
+[info] 
+[info] i  Detected a .git folder at /home/chinmay/Projects/covid-gdgpune 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=144855135&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2021-05-20T14:20:19.993Z] >>> HTTP REQUEST POST https://github.com/login/oauth/access_token  
+ {"client_id":"89cf50f02ac6aaed3484","client_secret":"3330d14abc895d9a74d5f17cd7a00711fa2c5bf0","code":"4171f34036d66a45ff8b","redirect_uri":"http://localhost:9005","state":"144855135"}
+[debug] [2021-05-20T14:20:20.325Z] <<< HTTP RESPONSE 200 {"server":"GitHub.com","date":"Thu, 20 May 2021 14:20:20 GMT","content-type":"application/json; charset=utf-8","transfer-encoding":"chunked","vary":"X-PJAX, Accept-Encoding, Accept, X-Requested-With","permissions-policy":"interest-cohort=()","etag":"W/\"b09ab46039242712a23ea74803ca3756\"","cache-control":"max-age=0, private, must-revalidate","strict-transport-security":"max-age=31536000; includeSubdomains; preload","x-frame-options":"deny","x-content-type-options":"nosniff","x-xss-protection":"0","referrer-policy":"origin-when-cross-origin, strict-origin-when-cross-origin","expect-ct":"max-age=2592000, report-uri=\"https://api.github.com/_private/browser/errors\"","content-security-policy":"default-src 'none'; base-uri 'self'; block-all-mixed-content; connect-src 'self' uploads.github.com www.githubstatus.com collector.githubapp.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com; frame-ancestors 'none'; frame-src render.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com secured-user-images.githubusercontent.com/ *.githubusercontent.com; manifest-src 'self'; media-src 'none'; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/socket-worker-3f088aa2.js gist.github.com/socket-worker-3f088aa2.js","x-github-request-id":"BF60:25B0:37EF22:3BF6D6:60A67024"}
+[debug] [2021-05-20T14:20:20.331Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2021-05-20T14:20:20.764Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2021-05-20T14:20:20.764Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"GDGPune-active","id":53188746,"node_id":"MDQ6VXNlcjUzMTg4NzQ2","avatar_url":"https://avatars.githubusercontent.com/u/53188746?v=4","gravatar_id":"","url":"https://api.github.com/users/GDGPune-active","html_url":"https://github.com/GDGPune-active","followers_url":"https://api.github.com/users/GDGPune-active/followers","following_url":"https://api.github.com/users/GDGPune-active/following{/other_user}","gists_url":"https://api.github.com/users/GDGPune-active/gists{/gist_id}","starred_url":"https://api.github.com/users/GDGPune-active/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/GDGPune-active/subscriptions","organizations_url":"https://api.github.com/users/GDGPune-active/orgs","repos_url":"https://api.github.com/users/GDGPune-active/repos","events_url":"https://api.github.com/users/GDGPune-active/events{/privacy}","received_events_url":"https://api.github.com/users/GDGPune-active/received_events","type":"User","site_admin":false,"name":null,"company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":3,"public_gists":0,"followers":4,"following":0,"created_at":"2019-07-22T16:29:05Z","updated_at":"2021-05-20T14:06:40Z","private_gists":0,"total_private_repos":0,"owned_private_repos":0,"disk_usage":6945,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] ✔  Success! Logged into GitHub as GDGPune-active 
+[info] 
+[debug] [2021-05-20T14:20:22.808Z] >>> [apiv2][query] GET https://api.github.com/repos/GDGPune-active/covid-gdgpune/actions/secrets/public-key type=owner
+[debug] [2021-05-20T14:20:23.219Z] <<< [apiv2][status] GET https://api.github.com/repos/GDGPune-active/covid-gdgpune/actions/secrets/public-key 200
+[debug] [2021-05-20T14:20:23.220Z] <<< [apiv2][body] GET https://api.github.com/repos/GDGPune-active/covid-gdgpune/actions/secrets/public-key {"key_id":"568250167242549743","key":"WLTfhXxtPyRMUgdl8AAvGir8whcvmHYGf8qTIoyIRxo="}
+[debug] [2021-05-20T14:20:23.223Z] >>> [apiv2][query] GET https://api.github.com/repos/GDGPune-active/covid-gdgpune [none]
+[debug] [2021-05-20T14:20:23.633Z] <<< [apiv2][status] GET https://api.github.com/repos/GDGPune-active/covid-gdgpune 200
+[debug] [2021-05-20T14:20:23.634Z] <<< [apiv2][body] GET https://api.github.com/repos/GDGPune-active/covid-gdgpune {"id":366807896,"node_id":"MDEwOlJlcG9zaXRvcnkzNjY4MDc4OTY=","name":"covid-gdgpune","full_name":"GDGPune-active/covid-gdgpune","private":false,"owner":{"login":"GDGPune-active","id":53188746,"node_id":"MDQ6VXNlcjUzMTg4NzQ2","avatar_url":"https://avatars.githubusercontent.com/u/53188746?v=4","gravatar_id":"","url":"https://api.github.com/users/GDGPune-active","html_url":"https://github.com/GDGPune-active","followers_url":"https://api.github.com/users/GDGPune-active/followers","following_url":"https://api.github.com/users/GDGPune-active/following{/other_user}","gists_url":"https://api.github.com/users/GDGPune-active/gists{/gist_id}","starred_url":"https://api.github.com/users/GDGPune-active/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/GDGPune-active/subscriptions","organizations_url":"https://api.github.com/users/GDGPune-active/orgs","repos_url":"https://api.github.com/users/GDGPune-active/repos","events_url":"https://api.github.com/users/GDGPune-active/events{/privacy}","received_events_url":"https://api.github.com/users/GDGPune-active/received_events","type":"User","site_admin":false},"html_url":"https://github.com/GDGPune-active/covid-gdgpune","description":null,"fork":false,"url":"https://api.github.com/repos/GDGPune-active/covid-gdgpune","forks_url":"https://api.github.com/repos/GDGPune-active/covid-gdgpune/forks","keys_url":"https://api.github.com/repos/GDGPune-active/covid-gdgpune/keys{/key_id}","collaborators_url":"https://api.github.com/repos/GDGPune-active/covid-gdgpune/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/GDGPune-active/covid-gdgpune/teams","hooks_url":"https://api.github.com/repos/GDGPune-active/covid-gdgpune/hooks","issue_events_url":"https://api.github.com/repos/GDGPune-active/covid-gdgpune/issues/events{/number}","events_url":"https://api.github.com/repos/GDGPune-active/covid-gdgpune/events","assignees_url":"https://api.github.com/repos/GDGPune-active/covid-gdgpune/assignees{/user}","branches_url":"https://api.github.com/repos/GDGPune-active/covid-gdgpune/branches{/branch}","tags_url":"https://api.github.com/repos/GDGPune-active/covid-gdgpune/tags","blobs_url":"https://api.github.com/repos/GDGPune-active/covid-gdgpune/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/GDGPune-active/covid-gdgpune/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/GDGPune-active/covid-gdgpune/git/refs{/sha}","trees_url":"https://api.github.com/repos/GDGPune-active/covid-gdgpune/git/trees{/sha}","statuses_url":"https://api.github.com/repos/GDGPune-active/covid-gdgpune/statuses/{sha}","languages_url":"https://api.github.com/repos/GDGPune-active/covid-gdgpune/languages","stargazers_url":"https://api.github.com/repos/GDGPune-active/covid-gdgpune/stargazers","contributors_url":"https://api.github.com/repos/GDGPune-active/covid-gdgpune/contributors","subscribers_url":"https://api.github.com/repos/GDGPune-active/covid-gdgpune/subscribers","subscription_url":"https://api.github.com/repos/GDGPune-active/covid-gdgpune/subscription","commits_url":"https://api.github.com/repos/GDGPune-active/covid-gdgpune/commits{/sha}","git_commits_url":"https://api.github.com/repos/GDGPune-active/covid-gdgpune/git/commits{/sha}","comments_url":"https://api.github.com/repos/GDGPune-active/covid-gdgpune/comments{/number}","issue_comment_url":"https://api.github.com/repos/GDGPune-active/covid-gdgpune/issues/comments{/number}","contents_url":"https://api.github.com/repos/GDGPune-active/covid-gdgpune/contents/{+path}","compare_url":"https://api.github.com/repos/GDGPune-active/covid-gdgpune/compare/{base}...{head}","merges_url":"https://api.github.com/repos/GDGPune-active/covid-gdgpune/merges","archive_url":"https://api.github.com/repos/GDGPune-active/covid-gdgpune/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/GDGPune-active/covid-gdgpune/downloads","issues_url":"https://api.github.com/repos/GDGPune-active/covid-gdgpune/issues{/number}","pulls_url":"https://api.github.com/repos/GDGPune-active/covid-gdgpune/pulls{/number}","milestones_url":"https://api.github.com/repos/GDGPune-active/covid-gdgpune/milestones{/number}","notifications_url":"https://api.github.com/repos/GDGPune-active/covid-gdgpune/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/GDGPune-active/covid-gdgpune/labels{/name}","releases_url":"https://api.github.com/repos/GDGPune-active/covid-gdgpune/releases{/id}","deployments_url":"https://api.github.com/repos/GDGPune-active/covid-gdgpune/deployments","created_at":"2021-05-12T18:07:11Z","updated_at":"2021-05-20T13:59:56Z","pushed_at":"2021-05-20T13:59:53Z","git_url":"git://github.com/GDGPune-active/covid-gdgpune.git","ssh_url":"git@github.com:GDGPune-active/covid-gdgpune.git","clone_url":"https://github.com/GDGPune-active/covid-gdgpune.git","svn_url":"https://github.com/GDGPune-active/covid-gdgpune","homepage":null,"size":6945,"stargazers_count":3,"watchers_count":3,"language":"JavaScript","has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"forks_count":9,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":8,"license":{"key":"mit","name":"MIT License","spdx_id":"MIT","url":"https://api.github.com/licenses/mit","node_id":"MDc6TGljZW5zZTEz"},"forks":9,"open_issues":8,"watchers":3,"default_branch":"main","permissions":{"admin":true,"push":true,"pull":true},"temp_clone_token":"","allow_squash_merge":true,"allow_merge_commit":true,"allow_rebase_merge":true,"delete_branch_on_merge":false,"network_count":9,"subscribers_count":4}
+[debug] [2021-05-20T14:20:23.642Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-05-20T14:20:23.643Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-05-20T14:20:23.950Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","date":"Thu, 20 May 2021 14:20:23 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-05-20T14:20:23.966Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/gdg-covid/serviceAccounts  
+ {"accountId":"github-action-366807896","serviceAccount":{"displayName":"GitHub Actions (GDGPune-active/covid-gdgpune)","description":"A service account with permission to deploy to Firebase Hosting for the GitHub repository GDGPune-active/covid-gdgpune"}}
+[debug] [2021-05-20T14:20:25.684Z] <<< HTTP RESPONSE 409 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Thu, 20 May 2021 14:20:25 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-05-20T14:20:25.685Z] <<< HTTP RESPONSE BODY {"error":{"code":409,"message":"Service account github-action-366807896 already exists within project projects/gdg-covid.","status":"ALREADY_EXISTS","details":[{"@type":"type.googleapis.com/google.rpc.ResourceInfo","resourceName":"projects/gdg-covid/serviceAccounts/github-action-366807896@gdg-covid.iam.gserviceaccount.com"}]}}
+[debug] [2021-05-20T14:20:25.689Z] >>> HTTP REQUEST GET https://iam.googleapis.com/v1/projects/gdg-covid/serviceAccounts/github-action-366807896@gdg-covid.iam.gserviceaccount.com  
+ 
+[debug] [2021-05-20T14:20:25.691Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/gdg-covid:getIamPolicy  
+ 
+[debug] [2021-05-20T14:20:27.719Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 20 May 2021 14:20:27 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1538","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-05-20T14:20:27.721Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 20 May 2021 14:20:27 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-05-20T14:20:27.723Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/gdg-covid:setIamPolicy  
+ {"policy":{"version":1,"etag":"BwXCwP2FXRQ=","bindings":[{"role":"roles/editor","members":["serviceAccount:gdg-covid@appspot.gserviceaccount.com","user:gdgwtmpunedev@gmail.com"]},{"role":"roles/firebase.admin","members":["user:gdgwtmpunedev@gmail.com"]},{"role":"roles/firebase.managementServiceAgent","members":["serviceAccount:firebase-service-account@firebase-sa-management.iam.gserviceaccount.com"]},{"role":"roles/firebase.sdkAdminServiceAgent","members":["serviceAccount:firebase-adminsdk-joxze@gdg-covid.iam.gserviceaccount.com"]},{"role":"roles/firebaseappcheck.admin","members":["serviceAccount:firebase-adminsdk-joxze@gdg-covid.iam.gserviceaccount.com"]},{"role":"roles/firebaseauth.admin","members":["serviceAccount:firebase-adminsdk-joxze@gdg-covid.iam.gserviceaccount.com","serviceAccount:github-action-366807896@gdg-covid.iam.gserviceaccount.com"]},{"role":"roles/firebaserules.system","members":["serviceAccount:service-946761341539@firebase-rules.iam.gserviceaccount.com"]},{"role":"roles/iam.serviceAccountTokenCreator","members":["serviceAccount:firebase-adminsdk-joxze@gdg-covid.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:technology@birdvision.in"]},{"role":"roles/pubsub.serviceAgent","members":["serviceAccount:service-946761341539@gcp-sa-pubsub.iam.gserviceaccount.com"]},{"role":"roles/serviceusage.apiKeysViewer","members":["serviceAccount:github-action-366807896@gdg-covid.iam.gserviceaccount.com"]},{"role":"roles/firebasehosting.admin","members":["serviceAccount:github-action-366807896@gdg-covid.iam.gserviceaccount.com"]},{"role":"roles/run.viewer","members":["serviceAccount:github-action-366807896@gdg-covid.iam.gserviceaccount.com"]}]},"updateMask":"bindings"}
+[debug] [2021-05-20T14:20:29.466Z] <<< HTTP RESPONSE 403 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Thu, 20 May 2021 14:20:29 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1490","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-05-20T14:20:29.466Z] <<< HTTP RESPONSE BODY {"error":{"code":403,"message":"Policy update access denied.","status":"PERMISSION_DENIED"}}
+[error] 
+[error] Error: HTTP Error: 403, Policy update access denied.
+[debug] [2021-05-20T14:20:29.762Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 403,
+      "message": "Policy update access denied.",
+      "status": "PERMISSION_DENIED"
+    }
+  },
+  "response": {
+    "statusCode": 403,
+    "body": {
+      "error": {
+        "code": 403,
+        "message": "Policy update access denied.",
+        "status": "PERMISSION_DENIED"
+      }
+    },
+    "headers": {
+      "vary": "X-Origin, Referer, Origin,Accept-Encoding",
+      "content-type": "application/json; charset=UTF-8",
+      "date": "Thu, 20 May 2021 14:20:29 GMT",
+      "server": "ESF",
+      "cache-control": "private",
+      "x-xss-protection": "0",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "server-timing": "gfet4t7; dur=1490",
+      "alt-svc": "h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"",
+      "accept-ranges": "none",
+      "transfer-encoding": "chunked"
+    },
+    "request": {
+      "uri": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "cloudresourcemanager.googleapis.com",
+        "port": 443,
+        "hostname": "cloudresourcemanager.googleapis.com",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/v1/projects/gdg-covid:setIamPolicy",
+        "path": "/v1/projects/gdg-covid:setIamPolicy",
+        "href": "https://cloudresourcemanager.googleapis.com/v1/projects/gdg-covid:setIamPolicy"
+      },
+      "method": "POST"
+    }
+  }
+}
