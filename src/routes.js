@@ -42,14 +42,14 @@ const dashboardRoutes = [
     component: DashboardPage,
     layout: "/admin",
   },
-  {
-    path: "/user",
-    name: "User Profile",
-    icon: Person,
-    component: UserProfile,
-    layout: "/admin",
-    private: true,
-  },
+  // {
+  //   path: "/user",
+  //   name: "User Profile",
+  //   icon: Person,
+  //   component: UserProfile,
+  //   layout: "/admin",
+  //   private: true,
+  // },
   {
     path: "/beds",
     name: "Beds",
@@ -59,7 +59,7 @@ const dashboardRoutes = [
   },
   {
     path: "/addBed",
-    name: "Bed Data",
+    name: "Add Information",
     icon: SpeakerNotesIcon,
     component: BedRegistration,
     layout: "/admin",

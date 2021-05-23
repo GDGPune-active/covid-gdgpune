@@ -1,42 +1,27 @@
-/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
-import PropTypes from "prop-types";
 
 import {
+  Button,
   Dialog,
   DialogActions,
   DialogContent,
   DialogContentText,
   DialogTitle,
   Slide,
-  Step,
-  StepLabel,
-  Stepper,
   TextField,
-  Typography,
-  IconButton,
-  Paper,
-  Link,
-  Grid,
 } from "@material-ui/core";
+
+import PropTypes from "prop-types";
+
 import { useAuthState } from "react-firebase-hooks/auth";
 
 import { firebase_app } from "data/firebase-config";
-import { useForm, Controller } from "react-hook-form";
 import MaterialUiPhoneNumber from "material-ui-phone-number";
 import firebase from "firebase/app";
 import { useHistory } from "react-router";
-import FacebookIcon from "@material-ui/icons/Facebook";
-import GitHubIcon from "@material-ui/icons/GitHub";
-import Button from "components/CustomButtons/Button.js";
-import FormControl from "@material-ui/core/FormControl";
-import InputLabel from "@material-ui/core/InputLabel";
-import Input from "@material-ui/core/Input";
-import EmailIcon from "@material-ui/icons/Email";
-import { AiOutlineGoogle } from "react-icons/ai";
 
 const Auth = (props) => {
-  const [user, loading, error] = useAuthState(firebase_app.auth());
+  const [user, loading] = useAuthState(firebase_app.auth());
   const [open, setOpen] = useState(false);
   const [phone, setPhone] = useState("");
   const [code, setCode] = useState("");
@@ -91,7 +76,7 @@ const Auth = (props) => {
         "sign-in-button",
         {
           size: "invisible",
-          callback: function (response) {
+          callback: function () {
             // reCAPTCHA solved, allow signInWithPhoneNumber.
             login();
           },
@@ -128,16 +113,18 @@ const Auth = (props) => {
         setPhone("");
         setCode("");
         // User signed in successfully.
+        // eslint-disable-next-line no-unused-vars
         const user = result.user;
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
 
         // console.log("SUCCESS");
       })
       .catch((error) => {
-        console.log("ERROR");
+        console.log("ERROR:" + error);
       });
   };
 
+  // eslint-disable-next-line no-unused-vars
   const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="down" ref={ref} {...props} />;
   });
@@ -155,37 +142,9 @@ const Auth = (props) => {
       aria-labelledby="alert-dialog-slide-title"
       aria-describedby="alert-dialog-slide-description"
     >
-      <DialogTitle id="alert-dialog-slide-title" class="signin-dialog">
-        {"Signin with "}
+      <DialogTitle id="alert-dialog-slide-title">
+        {"Signin to proceed"}
       </DialogTitle>
-      <div className="app-icons">
-        <IconButton
-          aria-label="facebook.com"
-          onClick={() => window.open("https://www.facebook.com/")}
-        >
-          <FacebookIcon
-            style={{ fontSize: 40, color: "#283e6b", padding: 5 }}
-            href="https://www.facebook.com/"
-          />
-        </IconButton>
-        <IconButton
-          aria-label="github.com"
-          onClick={() => window.open("https://www.github.com/")}
-        >
-          <GitHubIcon style={{ fontSize: 35, color: "#24292e", padding: 5 }} />
-        </IconButton>
-        <IconButton
-          aria-label="gmail.com"
-          onClick={() => window.open("https://www.gmail.com/")}
-        >
-          <AiOutlineGoogle
-            style={{ fontSize: 35, color: "#e34133", padding: 5 }}
-          />
-        </IconButton>
-      </div>
-      <p className="signin-p">
-        <span> Or </span>
-      </p>
       <DialogContent>
         <DialogContentText id="alert-dialog-slide-description"></DialogContentText>
         <div>{getStepContent(activeStep)}</div>
@@ -194,31 +153,21 @@ const Auth = (props) => {
         <Button
           disabled={activeStep === 0 || showLoading}
           onClick={() => setActiveStep((prevActiveStep) => prevActiveStep - 1)}
-          color="info"
-          variant="outlined"
-          size="md"
+          color="primary"
         >
-          <strong>Back</strong>
+          Back
         </Button>
         {activeStep === 0 ? (
           <Button
             disabled={showLoading || phone.length < 10}
             onClick={login}
-            color="info"
-            variant="outlined"
-            size="md"
+            color="primary"
           >
-            <strong>Generate OTP</strong>
+            Generate OTP
           </Button>
         ) : (
-          <Button
-            disabled={showLoading}
-            onClick={verifyOtp}
-            color="info"
-            variant="outlined"
-            size="md"
-          >
-            <strong>Verify</strong>
+          <Button disabled={showLoading} onClick={verifyOtp} color="primary">
+            Verify
           </Button>
         )}
       </DialogActions>
