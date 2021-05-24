@@ -1,0 +1,34 @@
+{
+  "name": "covid-support-platform",
+  "homepage": "https://github.com/GDGPune-active/covid-gdgpune",
+  "authors": [
+    "Rohan Lekhwani",
+    "Chinmay Atrawalkar",
+    "Aman Saini",
+    "Krishnan Raghavan",
+    "Raghavi Adoni",
+    "Pranav Jeurkar"
+  ],
+  "description": "COVID Support Platform for Pune",
+  "main": "public/index.html",
+  "keywords": [
+    "GDG",
+    "Pune",
+    "COVID",
+    "Support",
+    "Beds",
+    "Oxygen",
+    "Blood",
+    "Hospitals"
+  ],
+  "license": "MIT License",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "build"
+  ],
+  "private": true
+}
