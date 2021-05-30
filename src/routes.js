@@ -1,14 +1,15 @@
+/* eslint-disable no-unused-vars */
+// prettier-ignore
 /*!
 
 =========================================================
-* Material Dashboard React - v1.10.0
+* COVID Support Platform - GDG Pune
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/material-dashboard-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/material-dashboard-react/blob/master/LICENSE.md)
+* Product Page: <TODO: Add URL>
+* Copyright 2021 GDG Pune
 
-* Coded by Creative Tim
+* Coded by GDG Pune
 
 =========================================================
 
@@ -17,6 +18,7 @@
 */
 // @material-ui/icons
 import Dashboard from "@material-ui/icons/Dashboard";
+import HotelIcon from "@material-ui/icons/Hotel";
 import Person from "@material-ui/icons/Person";
 import LibraryBooks from "@material-ui/icons/LibraryBooks";
 import BubbleChart from "@material-ui/icons/BubbleChart";
@@ -24,10 +26,12 @@ import Notifications from "@material-ui/icons/Notifications";
 // core components/views for Admin layout
 import DashboardPage from "views/Dashboard/Dashboard.js";
 import UserProfile from "views/UserProfile/UserProfile.js";
-import TableList from "views/TableList/TableList.js";
+import Beds from "views/Beds/Beds.js";
 import Typography from "views/Typography/Typography.js";
 import Icons from "views/Icons/Icons.js";
 import NotificationsPage from "views/Notifications/Notifications.js";
+import BedRegistration from "views/BedRegistration/BedRegistration.js";
+import SpeakerNotesIcon from "@material-ui/icons/SpeakerNotes";
 // core components/views for RTL layout
 
 const dashboardRoutes = [
@@ -38,43 +42,51 @@ const dashboardRoutes = [
     component: DashboardPage,
     layout: "/admin",
   },
-  {
-    path: "/user",
-    name: "User Profile",
-    icon: Person,
-    component: UserProfile,
-    layout: "/admin",
-    private: true,
-  },
+  // {
+  //   path: "/user",
+  //   name: "User Profile",
+  //   icon: Person,
+  //   component: UserProfile,
+  //   layout: "/admin",
+  //   private: true,
+  // },
   {
     path: "/beds",
-    name: "Beds",
-    icon: "content_paste",
-    component: TableList,
+    name: "Available Beds",
+    icon: HotelIcon,
+    component: Beds,
     layout: "/admin",
   },
   {
-    path: "/typography",
-    name: "Typography",
-    icon: LibraryBooks,
-    component: Typography,
+    path: "/addBed",
+    name: "Add Information",
+    icon: SpeakerNotesIcon,
+    component: BedRegistration,
     layout: "/admin",
     private: true,
   },
-  {
-    path: "/icons",
-    name: "Icons",
-    icon: BubbleChart,
-    component: Icons,
-    layout: "/admin",
-  },
-  {
-    path: "/notifications",
-    name: "Notifications",
-    icon: Notifications,
-    component: NotificationsPage,
-    layout: "/admin",
-  },
+  // {
+  //   path: "/typography",
+  //   name: "Typography",
+  //   icon: LibraryBooks,
+  //   component: Typography,
+  //   layout: "/admin",
+  //   private: true,
+  // },
+  // {
+  //   path: "/icons",
+  //   name: "Icons",
+  //   icon: BubbleChart,
+  //   component: Icons,
+  //   layout: "/admin",
+  // },
+  // {
+  //   path: "/notifications",
+  //   name: "Notifications",
+  //   icon: Notifications,
+  //   component: NotificationsPage,
+  //   layout: "/admin",
+  // },
 ];
 
 export default dashboardRoutes;

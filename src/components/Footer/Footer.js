@@ -18,23 +18,40 @@ export default function Footer(props) {
         <div className={classes.left}>
           <List className={classes.list}>
             <ListItem className={classes.inlineBlock}>
-              <a href="#home" className={classes.block}>
-                Home
+              <a
+                href="https://gdg.community.dev/gdg-pune"
+                className={classes.block}
+              >
+                Join Us
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
-              <a href="#company" className={classes.block}>
-                Company
+              <a
+                href="https://www.meetup.com/Pune-GDG/"
+                className={classes.block}
+              >
+                Meetup
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
-              <a href="#portfolio" className={classes.block}>
-                Portfolio
+              <a href="https://twitter.com/gdgpune" className={classes.block}>
+                Twitter
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
-              <a href="#blog" className={classes.block}>
-                Blog
+              <a
+                href="https://www.facebook.com/groups/gdgpune"
+                className={classes.block}
+              >
+                Facebook
+              </a>
+            </ListItem>
+            <ListItem className={classes.inlineBlock}>
+              <a
+                href="https://www.linkedin.com/company/gdgpune"
+                className={classes.block}
+              >
+                LinkedIn
               </a>
             </ListItem>
           </List>
@@ -43,13 +60,13 @@ export default function Footer(props) {
           <span>
             &copy; {1900 + new Date().getYear()}{" "}
             <a
-              href="https://www.creative-tim.com?ref=mdr-footer"
+              href="https://gdg.community.dev/gdg-pune"
               target="_blank"
               className={classes.a}
             >
-              Creative Tim
+              GDG Pune
             </a>
-            , made with love for a better web
+            , made with love for Pune
           </span>
         </p>
       </div>

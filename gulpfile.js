@@ -2,20 +2,20 @@ const gulp = require("gulp");
 const gap = require("gulp-append-prepend");
 
 gulp.task("licenses", async () => {
-  // this is to add Creative Tim licenses in the production mode for the minified js
+  // this is to add GDG Pune licenses in the production mode for the minified js
   gulp
     .src("build/static/js/*chunk.js", { base: "./" })
     .pipe(
       gap.prependText(`/*!
 
 =========================================================
-* Material Dashboard React - v1.10.0
+* COVID Support Platform - GDG Pune
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/material-dashboard-react
-* Copyright 2021 Creative Tim (http://www.creative-tim.com)
+* Product Page: <TODO: Add URL>
+* Copyright 2021 GDG Pune
 
-* Coded by Creative Tim
+* Coded by GDG Pune
 
 =========================================================
 
@@ -25,20 +25,20 @@ gulp.task("licenses", async () => {
     )
     .pipe(gulp.dest("./", { overwrite: true }));
 
-  // this is to add Creative Tim licenses in the production mode for the minified html
+  // this is to add GDG Pune licenses in the production mode for the minified html
   gulp
     .src("build/index.html", { base: "./" })
     .pipe(
       gap.prependText(`<!--
 
 =========================================================
-* Material Dashboard React - v1.10.0
+* COVID Support Platform - GDG Pune
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/material-dashboard-react
-* Copyright 2021 Creative Tim (http://www.creative-tim.com)
+* Product Page: <TODO: Add URL>
+* Copyright 2021 GDG Pune
 
-* Coded by Creative Tim
+* Coded by GDG Pune
 
 =========================================================
 
@@ -48,20 +48,20 @@ gulp.task("licenses", async () => {
     )
     .pipe(gulp.dest("./", { overwrite: true }));
 
-  // this is to add Creative Tim licenses in the production mode for the minified css
+  // this is to add GDG Pune licenses in the production mode for the minified css
   gulp
     .src("build/static/css/*chunk.css", { base: "./" })
     .pipe(
       gap.prependText(`/*!
 
 =========================================================
-* Material Dashboard React - v1.10.0
+* COVID Support Platform - GDG Pune
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/material-dashboard-react
-* Copyright 2021 Creative Tim (http://www.creative-tim.com)
+* Product Page: <TODO: Add URL>
+* Copyright 2021 GDG Pune
 
-* Coded by Creative Tim
+* Coded by GDG Pune
 
 =========================================================
 

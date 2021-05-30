@@ -79,18 +79,20 @@ export default function AdminNavbarLinks() {
           <Search />
         </Button>
       </div>
-      <Button
-        color={window.innerWidth > 959 ? "transparent" : "white"}
-        justIcon={window.innerWidth > 959}
-        simple={!(window.innerWidth > 959)}
-        aria-label="Dashboard"
-        className={classes.buttonLink}
-      >
-        <Dashboard className={classes.icons} />
-        <Hidden mdUp implementation="css">
-          <p className={classes.linkText}>Dashboard</p>
-        </Hidden>
-      </Button>
+      <a href="/dashboard" style={{ textDecorationStyle: "none" }}>
+        <Button
+          color={window.innerWidth > 959 ? "transparent" : "white"}
+          justIcon={window.innerWidth > 959}
+          simple={!(window.innerWidth > 959)}
+          aria-label="Dashboard"
+          className={classes.buttonLink}
+        >
+          <Dashboard className={classes.icons} />
+          <Hidden mdUp implementation="css">
+            <p className={classes.linkText}>Dashboard</p>
+          </Hidden>
+        </Button>
+      </a>
       <div className={classes.manager}>
         <Button
           color={window.innerWidth > 959 ? "transparent" : "white"}
@@ -166,7 +168,7 @@ export default function AdminNavbarLinks() {
             </Grow>
           )}
         </Poppers>
-      </div>
+      </div>{" "}
       {user ? (
         <div className={classes.manager}>
           <Button
