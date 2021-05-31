@@ -9,10 +9,10 @@ import Paper from "@material-ui/core/Paper";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 import Hidden from "@material-ui/core/Hidden";
 import Poppers from "@material-ui/core/Popper";
-import Divider from "@material-ui/core/Divider";
+// import Divider from "@material-ui/core/Divider";
 // @material-ui/icons
 import Person from "@material-ui/icons/Person";
-import Notifications from "@material-ui/icons/Notifications";
+// import Notifications from "@material-ui/icons/Notifications";
 import Dashboard from "@material-ui/icons/Dashboard";
 import Search from "@material-ui/icons/Search";
 // core components
@@ -31,21 +31,21 @@ export default function AdminNavbarLinks() {
   const [user, loading, error] = useAuthState(firebase_app.auth());
 
   const classes = useStyles();
-  const [openNotification, setOpenNotification] = useState(null);
+  // const [openNotification, setOpenNotification] = useState(null);
   const [openProfile, setOpenProfile] = useState(null);
 
   const [showLoginPopup, setShowLoginPopup] = useState(false);
 
-  const handleClickNotification = (event) => {
-    if (openNotification && openNotification.contains(event.target)) {
-      setOpenNotification(null);
-    } else {
-      setOpenNotification(event.currentTarget);
-    }
-  };
-  const handleCloseNotification = () => {
-    setOpenNotification(null);
-  };
+  // const handleClickNotification = (event) => {
+  //   if (openNotification && openNotification.contains(event.target)) {
+  //     setOpenNotification(null);
+  //   } else {
+  //     setOpenNotification(event.currentTarget);
+  //   }
+  // };
+  // const handleCloseNotification = () => {
+  //   setOpenNotification(null);
+  // };
   const handleClickProfile = (event) => {
     if (openProfile && openProfile.contains(event.target)) {
       setOpenProfile(null);
@@ -93,7 +93,7 @@ export default function AdminNavbarLinks() {
           </Hidden>
         </Button>
       </a>
-      <div className={classes.manager}>
+      {/* <div className={classes.manager}>
         <Button
           color={window.innerWidth > 959 ? "transparent" : "white"}
           justIcon={window.innerWidth > 959}
@@ -168,7 +168,7 @@ export default function AdminNavbarLinks() {
             </Grow>
           )}
         </Poppers>
-      </div>{" "}
+      </div>{" "} */}
       {user ? (
         <div className={classes.manager}>
           <Button
@@ -208,7 +208,7 @@ export default function AdminNavbarLinks() {
                 <Paper>
                   <ClickAwayListener onClickAway={handleCloseProfile}>
                     <MenuList role="menu">
-                      <MenuItem
+                      {/* <MenuItem
                         onClick={handleCloseProfile}
                         className={classes.dropdownItem}
                       >
@@ -220,7 +220,7 @@ export default function AdminNavbarLinks() {
                       >
                         Settings
                       </MenuItem>
-                      <Divider light />
+                      <Divider light /> */}
                       <MenuItem
                         onClick={() => {
                           firebase_app.auth().signOut();

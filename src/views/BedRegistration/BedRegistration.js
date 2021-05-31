@@ -51,7 +51,6 @@ export default function BedRegistration() {
     ["name"]: "",
     ["address"]: "",
     ["bedType"]: "Without Oxygen",
-    ["date"]: new Date(),
     ["vacantNo"]: 0,
     ["contact"]: "",
   });
@@ -78,7 +77,6 @@ export default function BedRegistration() {
         ["name"]: "",
         ["address"]: "",
         ["bedType"]: "Without Oxygen",
-        ["date"]: new Date(),
         ["vacantNo"]: 0,
         ["contact"]: "",
       });
