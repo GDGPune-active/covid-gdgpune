@@ -20,7 +20,6 @@ import CardHeader from "components/Card/CardHeader.js";
 import CardBody from "components/Card/CardBody.js";
 import CardFooter from "components/Card/CardFooter.js";
 import GridContainer from "components/Grid/GridContainer.js";
-import MaterialUiPhoneNumber from "material-ui-phone-number";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { firebase_app } from "data/firebase-config";
 import { db } from "data/firebase-config";
@@ -67,21 +66,25 @@ export default function BedRegistration() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (user) {
-      db.collection("userProfile")
-        .doc(user.uid)
-        .collection("hospitalBeds")
-        .add({ ...fieldValues });
+    if (fieldValues.name != "" && fieldValues.address != "") {
+      if (user) {
+        db.collection("userProfile")
+          .doc(user.uid)
+          .collection("hospitalBeds")
+          .add({ ...fieldValues });
+      }
+      alert("Your data is successfully submitted");
+      setFieldvalues({
+        ["name"]: "",
+        ["address"]: "",
+        ["bedType"]: "Without Oxygen",
+        ["date"]: new Date(),
+        ["vacantNo"]: 0,
+        ["contact"]: "",
+      });
+    } else {
+      alert("Please fill all required fields before submitting.");
     }
-    alert("Your data is successfully submitted");
-    setFieldvalues({
-      ["name"]: "",
-      ["address"]: "",
-      ["bedType"]: "Without Oxygen",
-      ["date"]: new Date(),
-      ["vacantNo"]: 0,
-      ["contact"]: "",
-    });
   };
   return (
     <GridContainer>
@@ -94,7 +97,9 @@ export default function BedRegistration() {
             </p>
           </CardHeader>
           <CardBody className={classes.cardCategoryWhite}>
-            <GridContainer>
+            <GridContainer
+              style={{ display: "flex", justifyContent: "space-between" }}
+            >
               <GridItem xs={12} sm={12} md={5}>
                 <TextField
                   required
@@ -104,21 +109,13 @@ export default function BedRegistration() {
                   value={fieldValues.name}
                   onChange={handleChange}
                   fullWidth
+                  variant="outlined"
                   margin="normal"
                 />
               </GridItem>
               <GridItem xs={12} sm={12} md={5}>
-                {/* <MaterialUiPhoneNumber
-                  name="phone"
-                  label="Hospital Phone Number"
-                  data-cy="user-phone"
-                  defaultCountry={"in"}
-                  countryCodeEditable={false}
-                  value={fieldValues.phone}
-                  onChange={handleChange}
-                  margin="normal"
-                /> */}
                 <TextField
+                  style={{ marginBottom: "30px" }}
                   name="contact"
                   label="Hospital Contact Number"
                   data-cy="user-phone"
@@ -126,6 +123,7 @@ export default function BedRegistration() {
                   countryCodeEditable={false}
                   value={fieldValues.phone}
                   onChange={handleChange}
+                  variant="outlined"
                   margin="normal"
                 />
               </GridItem>
@@ -143,6 +141,7 @@ export default function BedRegistration() {
                     name="bedType"
                     fullWidth
                     margin="normal"
+                    variant="outlined"
                   >
                     <MenuItem value={"Without Oxygen"}>Without Oxygen</MenuItem>
                     <MenuItem value={"With Oxygen"}>With Oxygen</MenuItem>
@@ -157,6 +156,7 @@ export default function BedRegistration() {
               </GridItem>
               <GridItem xs={12} sm={12} md={5}>
                 <TextField
+                  style={{ marginBottom: "30px" }}
                   required
                   id="standard-required"
                   label="Number of Vacant Beds"
@@ -164,39 +164,10 @@ export default function BedRegistration() {
                   name="vacantNo"
                   value={fieldValues.vacantNo}
                   onChange={handleChange}
+                  variant="outlined"
+                  margin="normal"
                 />
               </GridItem>
-              <MuiPickersUtilsProvider utils={DateFnsUtils}>
-                <GridItem xs={12} sm={12} md={5}>
-                  <KeyboardDatePicker
-                    disableToolbar
-                    required
-                    variant="inline"
-                    format="MM/dd/yyyy"
-                    margin="normal"
-                    id="date-picker-inline"
-                    label="Verfieid At: Date"
-                    value={fieldValues.date}
-                    onChange={handleChange}
-                    KeyboardButtonProps={{
-                      "aria-label": "change date",
-                    }}
-                  />
-                </GridItem>
-                <GridItem xs={12} sm={12} md={5}>
-                  <KeyboardTimePicker
-                    required
-                    margin="normal"
-                    id="time-picker"
-                    label="Verfieid At: Time"
-                    value={fieldValues.date}
-                    onChange={handleChange}
-                    KeyboardButtonProps={{
-                      "aria-label": "change time",
-                    }}
-                  />
-                </GridItem>
-              </MuiPickersUtilsProvider>
               <GridItem xs={12} sm={12} md={8}>
                 <TextField
                   label="Address"
@@ -208,6 +179,8 @@ export default function BedRegistration() {
                   value={fieldValues.address}
                   onChange={handleChange}
                   fullWidth
+                  variant="outlined"
+                  margin="normal"
                 />
               </GridItem>
             </GridContainer>
