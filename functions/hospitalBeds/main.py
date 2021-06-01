@@ -19,7 +19,7 @@ def hospitalBeds(data, context):
 
         doc_ref = db.collection(u'userProfile').document(uid1).collection(u'hospitalBeds').document(uid2)
         bedType = data['value']['fields']['bedType']['stringValue']
-        vacantBeds = data['value']['fields']['vacantNo']['stringValue']
+        vacantBeds = int(data['value']['fields']['vacantNo']['stringValue'])
 
         if(data['value']['fields']['verified']['stringValue']=='Yes'):
             doc_ref.update({
@@ -28,7 +28,20 @@ def hospitalBeds(data, context):
 
             # ADD value
             total_ref = db.collection(u'totalData').document('totalDataforDashboard')
-            total = total_ref.to_dict()
+            total = total_ref.get()
+
+            if total.exists:
+                total = total.to_dict()
+            
+            else:
+                total_ref.set({
+                    'totalBeds': int(0),
+                    'withoutOxygen': int(0),
+                    'withOxygen': int(0),
+                    'ICUwithVentilator': int(0),
+                    'ICUwithoutVentilator': int(0)
+                    })
+                total = total_ref.get().to_dict()
 
             total_ref.update({
                 'totalBeds': total['totalBeds']+vacantBeds
@@ -63,7 +76,20 @@ def hospitalBeds(data, context):
                 
                 #subtract
                 total_ref = db.collection(u'totalData').document('totalDataforDashboard')
-                total = total_ref.to_dict()
+                total = total_ref.get()
+
+                if total.exists:
+                    total = total.to_dict()
+            
+                else:
+                    total_ref.set({
+                        'totalBeds': int(0),
+                        'withoutOxygen': int(0),
+                        'withOxygen': int(0),
+                        'ICUwithVentilator': int(0),
+                        'ICUwithoutVentilator': int(0)
+                        })
+                    total = total_ref.get().to_dict()
 
                 total_ref.update({
                     'totalBeds': total['totalBeds']-vacantBeds
