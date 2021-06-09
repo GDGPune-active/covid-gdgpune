@@ -28,10 +28,14 @@ import DashboardPage from "views/Dashboard/Dashboard.js";
 import UserProfile from "views/UserProfile/UserProfile.js";
 import Beds from "views/Beds/Beds.js";
 import Typography from "views/Typography/Typography.js";
+import Vaccinated from "views/Vaccinated/Vaccinated.js";
+import Corporate from "views/Corporate/Corporate.js";
 import Icons from "views/Icons/Icons.js";
 import NotificationsPage from "views/Notifications/Notifications.js";
 import BedRegistration from "views/BedRegistration/BedRegistration.js";
 import SpeakerNotesIcon from "@material-ui/icons/SpeakerNotes";
+import BusinessIcon from "@material-ui/icons/Business";
+import InvertColorsIcon from "@material-ui/icons/InvertColors";
 // core components/views for RTL layout
 
 const dashboardRoutes = [
@@ -65,21 +69,21 @@ const dashboardRoutes = [
     layout: "/admin",
     private: true,
   },
-  // {
-  //   path: "/typography",
-  //   name: "Typography",
-  //   icon: LibraryBooks,
-  //   component: Typography,
-  //   layout: "/admin",
-  //   private: true,
-  // },
-  // {
-  //   path: "/icons",
-  //   name: "Icons",
-  //   icon: BubbleChart,
-  //   component: Icons,
-  //   layout: "/admin",
-  // },
+  {
+    path: "/corporate",
+    name: "Corporate Tie-Up",
+    icon: BusinessIcon,
+    component: Corporate,
+    layout: "/admin",
+    private: true,
+  },
+  {
+    path: "/vaccinated",
+    name: "Get Vaccinated",
+    icon: InvertColorsIcon,
+    component: Vaccinated,
+    layout: "/admin",
+  },
   // {
   //   path: "/notifications",
   //   name: "Notifications",
